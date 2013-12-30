@@ -1,0 +1,31 @@
+.mario {
+  position: absolute;
+  left: 100px;
+  bottom: 40px;
+  height: 40px;
+  width: 20px;
+  background-color: transparent;
+  /* background-image: url(http://sheltered-sierra-9273.herokuapp.com/assets/smw_mario_sheet.png);*/
+  background-image: url(http://www.mariomayhem.com/downloads/sprites/smw/smw_mario_sheet.png);
+  background-size: 392px 784px;
+  background-repeat: no-repeat;
+  background-position: -206px -64px;
+  -webkit-transition: top 0.1s linear, left 0.1s linear, right 0.1s linear, bottom 0.1s linear;
+  -moz-transition: top 0.1s linear, left 0.1s linear, right 0.1s linear, bottom 0.1s linear;
+  -ms-transition: top 0.1s linear, left 0.1s linear, right 0.1s linear, bottom 0.1s linear;
+  -o-transition: top 0.1s linear, left 0.1s linear, right 0.1s linear, bottom 0.1s linear;
+  transition: top 0.1s linear, left 0.1s linear, right 0.1s linear, bottom 0.1s linear;
+}
+ .mario.left {
+  background-position: -6px -64px;
+}
+ .mario.right {
+  background-position: -328px -64px;
+}
+.mario.alternate.left {
+  background-position: -50px -64px;
+}
+ .mario.alternate.right {
+  background-position: -369px -64px;
+}
+
