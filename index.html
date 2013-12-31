@@ -17,6 +17,17 @@
 </head>
 <body>
  <img id="image-me" src="images/ja5.png">
+  <div class="progress-wrap progress" data-progress-percent="20">
+      <div class="progress-bar progress"></div>
+    </div>
+   <div class="timeline">    
+         <div class="color color1"></div>
+         <div class="color color2"></div>
+         <div class="color color3"></div>
+         <div class="color color4"></div>
+         <div class="color color5"></div>
+    </div>
+
  
 
   <div class="elements censor clothes"
@@ -225,7 +236,28 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
+<script type="text/javascript">
+// on page load...
+    moveProgressBar();
+    // on browser resize...
+    $(window).resize(function() {
+        moveProgressBar();
+    });
 
+    // SIGNATURE PROGRESS
+    function moveProgressBar() {
+        var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+        var getProgressWrapWidth = $('.progress-wrap').width();
+        var progressTotal = getPercent * getProgressWrapWidth;
+        var animationLength = 2500;
+        
+        // on page load, animate percentage bar to data percentage length
+        // .stop() used to prevent animation queueing
+        $('.progress-bar').stop().animate({
+            left: progressTotal
+        }, animationLength);
+    }
+</script>
  
   <script type="text/javascript">
   skrollr.init({

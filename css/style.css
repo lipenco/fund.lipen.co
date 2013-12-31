@@ -35,10 +35,10 @@ body {font-size: .85em;}
 header {position: fixed; background: #fff; color: #fff; height: 90px; width: 100%; z-index: 100}
 header h1 {width: 95px; height: 91px; text-indent: -999em; display: block; position: absolute; top: 0px; left: 10px; background: transparent url('images/logo.png') center center no-repeat;}
 
-.step-1 a {background: white}
-.step-2 a {background: #3da3a2}
-.step-3 a {background: #eb713b}
-.step-4 a {background: #f2b636}
+.step-1 a {background: #ffffff}
+.step-2 a {background: #1abc9c}
+.step-3 a {background:#e74c3c}
+.step-4 a {background: #9b59b6}
 
 section {height: 1000px; width: 100%; z-index: 7; }
 #skrollr-body, #m-box--front-end-elements, #m-box--webdesigner-elements, #m-box--about-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px;overflow: hidden;}
@@ -47,6 +47,7 @@ position: fixed;
 top:0;
 right:-5%;
 height: 100%;
+z-index: 999;
 }
 #body {max-width: 1000px; margin: 0 auto;  height: 1000px; display: block; z-index: 1;}
 article {max-width: 1000px; margin: 0 auto; height: 1000px; display: block; }
@@ -56,8 +57,8 @@ article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;
 strong {font-weight: 700;}
 /*#body {background: transparent url('images/nude.png') center 40% no-repeat; position: fixed;width: 1000px; left: 50%; margin-left: -500px;}*/
 #skrollr-body.bonus {background: transparent url('images/nude-bonus.png') center 40% no-repeat;}
-#m-box--front-end {background-color: #3da3a2; }
-#m-box--about {background: #f2b636 url('images/bg-contact.gif') top center fixed no-repeat }
+#m-box--front-end {background-color: #1abc9c; }
+#m-box--about {background: #9b59b6 url('images/bg-contact.gif') top center fixed no-repeat }
 #m-box--front-end p, #m-box--presentation p, #m-box--webdesigner p, #m-box--about p {color: white; padding: 0 0 .7em 1.5em; font-size: 1.3em; font-weight: 300; line-height: 1.6em; width: 355px; }
 #m-box--presentation article {}
 #m-box--about article {}
@@ -100,10 +101,10 @@ strong {font-weight: 700;}
   padding-left: .3em
 }
 
-#m-box--webdesigner {background-color: #eb713b; }
+#m-box--webdesigner {background-color:#e74c3c; }
 #m-box--front-end ul {float: right; margin: 405px 50px 0 0;}
 #m-box--front-end-elements .list-intro {color: #0e6261;}
-#m-box--webdesigner-elements .list-intro {color: #3da3a2}
+#m-box--webdesigner-elements .list-intro {color: #1abc9c}
 
 @-webkit-keyframes shaker {
   0% {
@@ -148,7 +149,7 @@ strong {font-weight: 700;}
 .rails {width: 225px; height: 60px; background: transparent url('../images/rails.png') 0 0 no-repeat; z-index: 9;}
 .tea {width: 69px; height: 91px; background: transparent url('images/tea.gif') 0 0 no-repeat; z-index: 9;}
 .headphones {width: 79px; height: 73px; background: transparent url('images/headphones.gif') 0 0 no-repeat; z-index: 9;}
-.bubble {width: 420px; height: 400px; background: transparent url('../images/boubble4.png') 0 0 no-repeat; z-index: 9;}
+.bubble {width: 420px; height: 400px; background: transparent url('../images/bubble4.png') 0 0 no-repeat; z-index: 9;}
 .basket-bottom {width: 116px; height: 135px; background: transparent url('images/short.png') 0 0 no-repeat; z-index: 9;}
 .shoes-up {width: 115px; height: 100px; background: transparent url('images/converse-high.png') 0 0 no-repeat; z-index: 10;}
 .macbook {width: 252px; height: 199px; background: transparent url('images/macbook.gif') 0 0 no-repeat; z-index: 9;}
@@ -162,8 +163,8 @@ strong {font-weight: 700;}
 .shoes-about {width: 115px; height: 48px; background: transparent url('images/converse-about.png') 0 0 no-repeat; z-index: 9;}
 .lettering {width: 200px; height: 150px; background: transparent url('images/lettering.gif') 0 0 no-repeat; z-index: 9;}
 
-#donators {background: #222; opacity: 0.8; position: relative; z-index: 12; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
-footer {background: #222; position: relative; z-index: 12; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
+#donators {background: #f1c40f; opacity: 0.9; position: relative; z-index: 12; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
+footer {background: #f1c40f; position: relative; z-index: 12; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
 footer ul, nav ul, .opt-nav-mobile {text-align: center; margin: 1em 0 0;}
 footer li, nav li, .opt-nav li, .opt-nav-mobile li {display: inline-block; margin: 0 .5em; font-size: 1.1em; line-height: 1}
 footer a {color: white;}
@@ -183,21 +184,81 @@ footer span, .opt-nav span, .opt-nav-mobile span {display: block; text-indent: -
 #close {color: white; position: absolute; z-index: 5; top: 10px; right: 10px; font-weight: 700; text-decoration: none}
 #m-box--mobile {display: none;}
 
-/* AWARDS */
 
-.opl {
-position:fixed;
-top:100px;
-left:0px;
-z-index:99999;
+
+/*.progress {
+  width: 50px;
+  height: 25%;
+  background-color: #34495e;
+  left: 10px;
+  bottom: 0;
+
+  position: fixed;
+  z-index: 100;
+
+}*/
+
+
+.progress {
+  width: 100%;
+  height: 20px;
+
 }
-.opl a {
-width:73px;
-height:56px;
-text-indent:-9999px;
-display:block;
-background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award.png') no-repeat;
+
+.progress-wrap {
+  background: #2EB3D0;
+  margin: 0;
+  overflow: hidden;
+  position:fixed;
+  bottom: 0;
+  left:0;
 }
+.progress-wrap .progress-bar {
+  background: #ffffff ;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+
+.timeline {
+    width: 10px;
+    height: 100%;
+    background-color: #ffffff;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.timeline .color {
+  height: 20%;
+
+}
+
+.timeline .color1 {
+  background-color: #ffffff;
+}
+
+.timeline .color2 {
+  background-color:  #1abc9c;
+}
+
+.timeline .color3 {
+  background-color:  #e74c3c;
+}
+
+
+.timeline .color4 {
+  background-color: #9b59b6;
+}
+
+.timeline .color5 {
+  background-color: #f1c40f;
+}
+
+
+
+
 
 @media only screen and (max-width: 1000px) {
   header, footer, .elements, #skrollr-body, #body, .tips, #m-box--front-end, #m-box--front-end-elements, #m-box--webdesigner-elements, .m-box--container, .m-box #m-box--about-elements, #m-box--webdesigner, #m-box--about, #m-box--presentation {display: none !important; height: auto !important}
