@@ -47,7 +47,6 @@ position: fixed;
 top:0;
 right:-5%;
 height: 100%;
-z-index: 999;
 }
 #body {max-width: 1000px; margin: 0 auto;  height: 1000px; display: block; z-index: 1;}
 article {max-width: 1000px; margin: 0 auto; height: 1000px; display: block; }
@@ -149,7 +148,7 @@ strong {font-weight: 700;}
 .rails {width: 225px; height: 60px; background: transparent url('../images/rails.png') 0 0 no-repeat; z-index: 9;}
 .tea {width: 69px; height: 91px; background: transparent url('images/tea.gif') 0 0 no-repeat; z-index: 9;}
 .headphones {width: 79px; height: 73px; background: transparent url('images/headphones.gif') 0 0 no-repeat; z-index: 9;}
-.bubble {width: 420px; height: 400px; background: transparent url('../images/bubble4.png') 0 0 no-repeat; z-index: 9;}
+.bubble {width: 420px; height: 400px; background: transparent url('../images/boubble4.png') 0 0 no-repeat; z-index: 9;}
 .basket-bottom {width: 116px; height: 135px; background: transparent url('images/short.png') 0 0 no-repeat; z-index: 9;}
 .shoes-up {width: 115px; height: 100px; background: transparent url('images/converse-high.png') 0 0 no-repeat; z-index: 10;}
 .macbook {width: 252px; height: 199px; background: transparent url('images/macbook.gif') 0 0 no-repeat; z-index: 9;}
@@ -202,6 +201,7 @@ footer span, .opt-nav span, .opt-nav-mobile span {display: block; text-indent: -
 .progress {
   width: 100%;
   height: 20px;
+  z-index: -1;
 
 }
 
