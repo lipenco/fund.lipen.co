@@ -16,29 +16,24 @@
 
 </head>
 <body>
- <img id="image-me" src="images/ja5.png">
+ <img id="image-me" src="images/ja56.png">
  
    <div class="timeline">    
-         <div class="color color1"></div>
-         <div class="color color2"></div>
-         <div class="color color3"></div>
-         <div class="color color4"></div>
-         <div class="color color5"></div>
+         <a href="#m-box--presentation"><div class="color color1"></div></a>
+         <a href="#m-box--front-end"><div class="color color2"></div></a>
+         <a href="#m-box--webdesigner"><div class="color color3"></div></a>
+         <a href="#m-box--about"><div class="color color4"></div></a>
+         <a href="#donators"><div class="color color5"></div></a>
     </div>
 
  
 
   <div class="elements censor clothes"
-    data-start="left: 50%; top: 425px; opacity: 1"
-    data-900-start="left: 50%; top: 425px; opacity: 1"
-    data-1000-start="left: 50%; top: 425px; opacity: 0"
-    data-1199-start="left: 50%; top: 425px; opacity: 0"
-    data-1200-start="left: 50%; top: 425px; opacity: 1"
-    data-1920-start="left: 50%; top: 425px; opacity: 1"
-    data-2000-start="left: 50%; top: 425px; opacity: 0"
-    data-2200-start="left: 50%; top: 425px; opacity: 1"
-    data-2950-start="left: 50%; top: 425px; opacity: 1"
-    data-3000-start="left: 50%; top: 425px; opacity: 0">
+    
+    data-1920-start="right: -6%; top: 60px; opacity: 0"
+    data-2000-start="right: -6%; top: 60px; opacity: 1"
+    data-2200-start="right: -6%; top: 60px; opacity: 1; transform:rotateX(-360deg)"
+    data-2950-start="right: -6%; top: 60px; opacity: 0">
   </div>
   <div id="skrollr-body">
     <div class="elements jean clothes"
@@ -182,7 +177,34 @@
     </section>
     <section id="donators">
     <article>
-      <p>Awesome people and organisations</p>
+      <p class="donators-title">Awesome people and organisations</p>
+     <div class="right-container container">
+      <div class="donut-chart-block block"> <!-- DONUT CHART BLOCK (LEFT-CONTAINER) -->
+            <h2 class="titular">DONATIONS STATS</h2>
+            <div class="donut-chart">
+               <canvas id="canvas" height="200" width="200"></canvas>
+                 
+                <p class="center-date">$ 3 700<br><span class="scnd-font-color">TO GO</span></p> 
+            </div>
+          <ul class="os-percentages horizontal-list">
+                <li>
+                    <p class="ios os scnd-font-color">DONATORS</p>
+                    <p class="os-percentage">85<sup></sup></p>
+                </li>
+                <li>
+                    <p class="mac os scnd-font-color">FOUND</p>
+                    <p class="os-percentage">54<sup>%</sup></p>
+                </li>
+           
+            </ul> 
+        </div>
+        <a class="sign-in button" href="#">DONATE</a>
+      </div>
+
+
+
+
+
     </article>
     </section>
     <section id="m-box--about-elements" class="m-box--container" data-start="z-index: 1" data-3000-start="z-index: 8">
@@ -194,6 +216,22 @@
       data-3299-start="left: 41.9%; top: 50px;"
       data-3599-start="left: -41.9%; top: 50px;">
       </li>
+
+      </ul>
+      
+      <ul class="elements icon social clothes horizontal-list block" data-2000-start="left: 41.9%; top: -547px;"
+      data-2999-start="left: 41.9%; top: 50px;"
+      data-3299-start="left: 41.9%; top: 50px;"
+      data-3599-start="left: -41.9%; top: 50px;"> 
+          <li class="facebook"><p class="icon"><span class="zocial-facebook"></span></p></li>
+          <li class="twitter"><p class="icon"><span class="zocial-twitter"></span></p></li>
+          <li class="googleplus"><p class="icon"><span class="zocial-googleplus"></span></p></li>
+          <li class="mailbox"><p class="icon"><span class="fontawesome-envelope"></span></p></li>
+       </ul>
+
+
+
+
       <!--   <li class="icon twitter elements"
           data-start="left: -300px; top: 198px; opacity: 0"
           data-2500-start="left: -355px; top: 198px; opacity: 0"
@@ -202,7 +240,7 @@
           data-start="left: 25px; top: -400px; opacity: 0"
           data-2500-start="left: 25px; top: -400px; opacity: 0"
           data-3000-start="left: 25px; top: 155px; opacity: 1"></li> -->
-      </ul>
+    
     </section>
     <footer>
       <p>Lipen.co - 2014</p>
@@ -229,11 +267,39 @@
         <li><a href=""><i class="icon-paper-plane"></i><span>Mail</span></a></li>
       </ul>
     </section> -->
+    <script type="text/javascript" src="http://www.chartjs.org/assets/Chart.js"></script>
+
+     <script>
+     var options = {
+      segmentShowStroke : false,
+      percentageInnerCutout : 80,
+      };
+
+    
+
+
+
+             var doughnutData = [
+                                {
+                                        value: 4300,
+                                        color:"#1abc9c" 
+                                },
+                                {
+                                        value : 8000-4300,
+                                        color : "#262d44"
+                                },
+                        
+                        ];
+
+        var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData, options);
+        
+        </script>
 
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
+
 
  
   <script type="text/javascript">
