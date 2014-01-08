@@ -224,4 +224,3 @@ function escapeSelector (str) {
 }
 
 })(jQuery);
-This looks like a JavaScript file. Click this bar to format it.
