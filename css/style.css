@@ -8,7 +8,7 @@ header h1 {width: 95px; height: 91px; text-indent: -999em; display: block; posit
 .step-4 a {background: #9b59b6}
 
 section {height: 1000px; width: 100%; z-index: 7; }
-#skrollr-body, #m-box--front-end-elements, #m-box--webdesigner-elements, #m-box--about-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px;overflow: hidden;}
+#skrollr-body, #m-box--railsgirls-elements, #m-box--flatiron-elements, #m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px;overflow: hidden;}
 #image-me {
 position: fixed;
 top:0;
@@ -23,18 +23,18 @@ article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;
 strong {font-weight: 700;}
 /*#body {background: transparent url('images/nude.png') center 40% no-repeat; position: fixed;width: 1000px; left: 50%; margin-left: -500px;}*/
 #skrollr-body.bonus {background: transparent url('images/nude-bonus.png') center 40% no-repeat;}
-#m-box--front-end {background-color: #1abc9c; }
-#m-box--about {background: #9b59b6 url('images/bg-contact.gif') top center fixed no-repeat }
-#m-box--front-end p, #m-box--presentation p, #m-box--webdesigner p, #m-box--about p {color: white; padding: 0 0 .7em 1.5em; font-size: 1.3em; font-weight: 300; line-height: 1.6em; width: 355px; }
-#m-box--presentation article {}
-#m-box--about article {}
-#m-box--front-end p, #m-box--front-end a {color: #9ad7d6;}
-#m-box--webdesigner p, #m-box--webdesigner a{color: #fae2be;}
-#m-box--about p, #m-box--about a {color: #f8f1e1;}
-#m-box--presentation p {
+#m-box--railsgirls {background-color: #1abc9c; }
+#m-box--scholarhip {background: #9b59b6 url('images/bg-contact.gif') top center fixed no-repeat }
+#m-box--railsgirls p, #m-box--start p, #m-box--flatiron p, #m-box--scholarhip p {color: white; padding: 0 0 .7em 1.5em; font-size: 1.3em; font-weight: 300; line-height: 1.6em; width: 355px; }
+#m-box--start article {}
+#m-box--scholarhip article {}
+#m-box--railsgirls p, #m-box--railsgirls a {color: #d1edec;}
+#m-box--flatiron p, #m-box--flatiron a{color: #fae2be;}
+#m-box--scholarhip p, #m-box--scholarhip a {color: #f8f1e1;}
+#m-box--start p {
   color: #8a8a8a; padding: 0 1em 1.5em 1em;
 }
-#m-box--front-end p:first-child, #m-box--presentation p:first-child, #m-box--webdesigner p:first-child, #m-box--about p:first-child {
+#m-box--railsgirls p:first-child, #m-box--start p:first-child, #m-box--flatiron p:first-child, #m-box--scholarhip p:first-child {
   border-left: 3px solid white;
   padding-top: 240px;
   font-size: 2.7em;
@@ -59,7 +59,7 @@ strong {font-weight: 700;}
 
 }
 
-#m-box--presentation p:first-child {
+#m-box--start p:first-child {
   color: #8a8a8a;
   border-left: 0 none;
   font-size: 3.5em;
@@ -67,10 +67,10 @@ strong {font-weight: 700;}
   padding-left: .3em
 }
 
-#m-box--webdesigner {background-color:#e74c3c; }
-#m-box--front-end ul {float: right; margin: 405px 50px 0 0;}
-#m-box--front-end-elements .list-intro {color: #0e6261;}
-#m-box--webdesigner-elements .list-intro {color: #1abc9c}
+#m-box--flatiron {background-color:#e74c3c; }
+#m-box--railsgirls ul {float: right; margin: 405px 50px 0 0;}
+#m-box--railsgirls-elements .list-intro {color: #0e6261;}
+#m-box--flatiron-elements .list-intro {color: #1abc9c}
 
 @-webkit-keyframes shaker {
   0% {
@@ -99,7 +99,7 @@ strong {font-weight: 700;}
 .clothes {z-index: 11;}
 .censor {width:320px;  height: 160px; margin-left: -91px; z-index: 22 !important;background: transparent url('') 0 0 no-repeat; z-index: 11; position: fixed;}
 .tshirt {width:951px;  height: 259px; background: transparent url('../images/github2.jpg') 0 0 no-repeat; z-index: 9;}
-.tshirt:hover, .headphones:hover, .blog:hover,  .poster:hover, .shirt:hover {
+.tshirt:hover, .headphones:hover, .blog:hover,   .shirt:hover {
   cursor: pointer;
   -moz-animation-name: shaker;
   -moz-animation-duration: .1s;
@@ -120,7 +120,7 @@ strong {font-weight: 700;}
 .shoes-up {width: 115px; height: 100px; background: transparent url('') 0 0 no-repeat; z-index: 10;}
 .macbook {width: 252px; height: 199px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .blog {width: 139px; height: 90px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
-.poster {width: 138px; height: 196px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
+.poster {width: 170px; height: 156px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 /*.twitter {width: 300px; height: 84px; background: transparent url('images/twitter.gif') 0 0 no-repeat; z-index: 7;}*/
 .sponge {width: 43px; height: 8px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .shirt {width: 155px; height: 247px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
@@ -204,7 +204,9 @@ footer span, .opt-nav span, .opt-nav-mobile span {display: block; text-indent: -
 
 
 @media only screen and (max-width: 1000px) {
-  header, footer, .elements, #skrollr-body, #body, .tips, #m-box--front-end, #m-box--front-end-elements, #m-box--webdesigner-elements, .m-box--container, .m-box #m-box--about-elements, #m-box--webdesigner, #m-box--about, #m-box--presentation {display: none !important; height: auto !important}
+  header, footer, 
+  .elements, #image-me, .elements, .rails, .octocat { display: none !important; 
+    height: auto !important }
   section#m-box--mobile {
     position: relative; 
     display: block; 
@@ -221,10 +223,6 @@ footer span, .opt-nav span, .opt-nav-mobile span {display: block; text-indent: -
     font-weight: 300;
   }
 }
-
-/** Inspired by: http://graphicburger.com/flat-design-ui-components/ **/
-/** Line-chart and donut-chart made by @kseso http://codepen.io/Kseso/pen/phiyL **/
-
 
 
 
@@ -353,63 +351,7 @@ h1, h2, p, a, span{
     text-decoration: none;
   }
 
-.arrow-btn-container {
-  position: relative;
-}
-  .arrow-btn {
-    position: absolute;
-    display: block;
-    width: 60px;
-    height: 60px;
-    -webkit-transition: background .3s;
-    transition: background .3s;
-  }
-    .arrow-btn:hover {
-      text-decoration: none;
-    }
-    .arrow-btn.left {
-      border-top-left-radius: 5px;
-    }
-    .arrow-btn.right {
-      border-top-right-radius: 5px;
-      right: 0;
-      top: 0;
-    }
-    .arrow-btn .icon {
-      display: block;
-      font-size: 18px;
-      border: 2px solid #fff;
-      border-radius: 100%;
-      line-height: 17px;
-      width: 21px;
-      margin: 20px auto;
-      text-align: center;
-    }
-      .arrow-btn.left .icon {
-        padding-right: 2px;
-      }
 
-.profile-picture {
-  border-radius: 100%;
-  overflow: hidden;
-  -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;  
-}
-  .big-profile-picture {
-    margin: 0 auto;   
-    border: 5px solid #50597b;
-    width: 150px;
-    height: 150px;
-  }
-  .small-profile-picture {
-    border: 2px solid #50597b;
-    width: 40px;
-    height: 40px;
-  }
-
-
-/** MAIN CONTAINER **/
 
 .main-container {
   font-family: 'Ubuntu', sans-serif;
@@ -417,74 +359,7 @@ h1, h2, p, a, span{
   height: 1725px;
   margin: 6em auto;
 } 
-  /*********************************************** HEADER ***********************************************/
-  header {
-    height: 80px;
-  }
-    .header-menu {
-      font-size: 17px;
-      line-height: 80px;
-    }
-      .header-menu li {
-        position: relative;
-            -webkit-transform: translateZ(0); /** To avoid a flash when hover messages **/
-      }
-        .header-menu-tab {
-          padding: 0 27px;
-          display: block;
-          line-height: 74px;
-          font-size: 17px;
-          -webkit-transition: background .3s;
-          transition: background .3s;
-        }
-          .header-menu-tab:hover {
-            background: #50597b;
-            border-bottom: 4px solid #11a8ab;
-            text-decoration: none;
-          }
-          .header-menu-tab .icon {
-            padding-right: 15px;
-          }
-        .header-menu-number {
-          position: absolute;
-          line-height: 22px;
-          padding: 0 6px;
-          font-weight: 700;
-          background: #e64c65;
-          border-radius: 100%;
-          top: 15px;
-          right: 2px;
-          -webkit-transition: all .3s linear;
-          transition: all .3s linear;
-        }
-          .header-menu li:hover .header-menu-number {
-            text-decoration: none;
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-
-          }
-    .profile-menu {
-      float: right;
-      height: 80px;
-      padding-right: 20px;
-    }
-      .profile-menu p {
-        font-size: 17px;
-        display: inline-block;
-        line-height: 76px;
-        margin: 0;
-        padding-right: 10px;
-      }
-        .profile-menu a {
-          padding-left: 5px;
-        }
-          .profile-menu a:hover {
-            text-decoration: none;
-          }
-      .small-profile-picture {
-        display: inline-block;
-        vertical-align: middle;       
-      }
+  
   /** CONTAINERS **/
   .container {
     float: right;
@@ -586,55 +461,7 @@ h1, h2, p, a, span{
               position: absolute;
               width: 100%;
             }
-          .quesito {
-              border-radius: 50%;
-              clip: rect(0px, 100px, 200px, 0px);
-              height: 100%;
-              position: absolute;
-              width: 100%;
-              font-family: monospace;
-              font-size: 1.5rem;
-            }
-          #porcion1 {
-              -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-            }
-
-          #porcion1 .quesito {
-              background-color: #11A8AB;
-              -webkit-transform: rotate(188deg);
-              transform: rotate(188deg);
-            }
-          #porcion2 {
-              -webkit-transform: rotate(76deg);
-              transform: rotate(76deg);
-            }
-          #porcion2 .quesito {
-              background-color: #11A8AB;
-              -webkit-transform: rotate(140deg);
-              transform: rotate(140deg);
-            }
-          #porcion3 {
-              -webkit-transform: rotate(215deg);
-              transform: rotate(215deg);
-            }
-          #porcion3 .quesito {
-              background-color: #4FC4F6;
-              -webkit-transform: rotate(113deg);
-              transform: rotate(113deg);
-            }
-          #porcionFin {
-              -webkit-transform: rotate(-62deg);
-              transform:rotate(-62deg);
-            }
-          #porcionFin .quesito {
-              background-color: #FCB150;
-              -webkit-transform: rotate(62deg);
-              transform: rotate(62deg);
-            }
-        /******************************************
-        END DONUT-CHART by @kseso http://codepen.io/Kseso/pen/phiyL
-        ******************************************/
+          
         .os-percentages {
           padding-top: 32px;
         }
@@ -727,6 +554,15 @@ margin: 0 auto;
           /*  border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;*/
           }
+
+.helpme {
+  margin-top: 1.6em;
+  padding: 0.6em;
+  font-size: 1em;
+  line-height: 1.4em;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
             
 
 
