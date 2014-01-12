@@ -73,32 +73,13 @@ strong {font-weight: 700;}
 #m-box--railsgirls-elements .list-intro {color: #0e6261;}
 #m-box--flatiron-elements .list-intro {color: #1abc9c}
 
-@-webkit-keyframes shaker {
-  0% {
-    -webkit-transform:rotate(2deg);
-  }
-  100% {
-    -webkit-transform:rotate(-2deg);
-  }
-}
 
-@-moz-keyframes shaker {
-  0% {
-    -moz-transform:rotate(2deg);
-  }
-  100% {
-    -moz-transform:rotate(-2deg);
-  }
-}
-
-.dialog {position: absolute; top: 110px; left: 210px; width: 208px; height: 72px; z-index: 22; background: transparent url('') 0 0 no-repeat; padding: 20px 10px 10px; font-family: 'Lato', sans-serif;
-}
 
 .m-list-accessories li{display: block; position: absolute;}
 .elements { display: block; position: absolute;}
 .elements a {width: 100%; height: 100%; display: block; font-family: 'Lato';}
 .clothes {z-index: 11;}
-.censor {width:320px;  height: 160px; margin-left: -91px; z-index: 22 !important;background: transparent url('') 0 0 no-repeat; z-index: 11; position: fixed;}
+.mustache {width:320px;  height: 200px; margin-left: -91px; z-index: 22 !important;background: transparent url('../images/mustache.png') 0 0 no-repeat; z-index: 11; position: fixed;}
 .tshirt {width:951px;  height: 259px; background: transparent url('../images/github2.jpg') 0 0 no-repeat; z-index: 9;}
 .jean {width:105px;  height: 321px; background: transparent url('') 0 0 no-repeat; z-index: 10;}
 .shoes {width: 115px; height: 47px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
