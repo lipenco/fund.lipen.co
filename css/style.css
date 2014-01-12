@@ -7,14 +7,13 @@ body {font-size: .85em;}
 
 section { width: 100%; z-index: 7; }
 #skrollr-body, #m-box--railsgirls-elements, #m-box--flatiron-elements, 
-#m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px;overflow: hidden;}
+#m-box--scholarhip-elements {position: fixed; width: 100%; left: 50%; margin-left: -500px;  top: 0; height: 1000px; overflow: hidden;}
 #image-me {
 position: fixed;
 top:0;
 right:-5%;
 height: 100%;
 }
-#body {max-width: 1000px; margin: 0 auto;  height: 1000px; display: block; z-index: 1;}
 article {max-width: 1000px; margin: 0 auto; height: 1000px; display: block; }
 
 article p {position: relative; z-index: 20}
@@ -22,9 +21,8 @@ article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;
 .list-intro{font-family: 'Lato', sans-serif; font-size: .9em;}
 strong {font-weight: 700;}
 /*#body {background: transparent url('images/nude.png') center 40% no-repeat; position: fixed;width: 1000px; left: 50%; margin-left: -500px;}*/
-#skrollr-body.bonus {background: transparent url('images/nude-bonus.png') center 40% no-repeat;}
 #m-box--railsgirls {background-color: #1abc9c; }
-#m-box--scholarhip {background: #9b59b6 url('images/bg-contact.gif') top center fixed no-repeat }
+#m-box--scholarhip {background: #9b59b6 url('') top center fixed no-repeat }
 #m-box--railsgirls p, #m-box--start p, #m-box--flatiron p, #m-box--scholarhip p {color: white; padding: 0 0 .7em 1.5em; font-size: 1.3em; font-weight: 300; line-height: 1.6em; width: 355px; }
 #m-box--start article {}
 #m-box--scholarhip article {}
@@ -80,7 +78,7 @@ strong {font-weight: 700;}
 .elements a {width: 100%; height: 100%; display: block; font-family: 'Lato';}
 .clothes {z-index: 11;}
 .mustache {width:320px;  height: 200px; margin-left: -91px; z-index: 22 !important;background: transparent url('../images/mustache.png') 0 0 no-repeat; z-index: 11; position: fixed;}
-.tshirt {width:951px;  height: 259px; background: transparent url('../images/github2.jpg') 0 0 no-repeat; z-index: 9;}
+.github {width:951px;  height: 259px; background: transparent url('../images/github2.jpg') 0 0 no-repeat; z-index: 9;}
 .jean {width:105px;  height: 321px; background: transparent url('') 0 0 no-repeat; z-index: 10;}
 .shoes {width: 115px; height: 47px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .icon { display: block; margin-top: -10px}
@@ -297,7 +295,7 @@ h1, h2, p, a, span{
   border-top-right-radius: 5px;
 }
 
-.button {
+.button  {
   display: block;
   width: 100%;
   line-height: 50px;
@@ -464,11 +462,11 @@ h1, h2, p, a, span{
         }
 
 
-.sign-in.button:hover {
+.sign-in.button:hover, .stripe-button-el:hover {
 background: #cc324b;
 }
 
-.sign-in.button {
+.stripe-button-el, .sign-in.button {
 background: #e64c65;
 margin: 0 auto;
 
@@ -535,33 +533,30 @@ margin: 0 auto;
    margin-left: 10px;
     margin-bottom: 20px;
     border-collapse:collapse;
-    z-index: 9999999;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     border: none;
                 border-radius: 3px;
                -webkit-border-radius: 3px;
                -moz-border-radius: 3px;
   }
-  .flat-table th, .flat-table td {
+ .flat-table td {
     box-shadow: inset 0 -1px rgba(0,0,0,0.25), 
       inset 0 1px rgba(0,0,0,0.25);
-      z-index: 9999999;
   }
-  .flat-table th {
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    padding: 1em;
-    color: rgba(0,0,0,0.45);
-    text-shadow: 0 0 1px rgba(0,0,0,0.1);
-    font-size: 1.5em;
-  }
+ 
   .flat-table td {
-    z-index: 9999999;
     color: #f7f7f7;
-    padding: 0.7em 1em 0.7em 1.15em;
+    padding: 0 1em 0.7em 1em;
     text-shadow: 0 0 1px rgba(255,255,255,0.1);
     font-size: 1.4em;
+
   }
+
+  .flat-table td img {
+    margin-bottom: -15px;
+  }
+
+
   .flat-table tr {
     -webkit-transition: background 0.3s, box-shadow 0.3s;
     -moz-transition: background 0.3s, box-shadow 0.3s;
@@ -580,9 +575,9 @@ margin: 0 auto;
 
 
 @media only screen and (max-width: 1000px) {
-  header,  #image-me, .rails, .octocat {
+  header,  #image-me, .rails, .octocat, .mustache , .github , .bubble, .social, .poster{
    display: none !important; 
-    height: auto !important }
+   }
 
 }
             

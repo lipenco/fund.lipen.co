@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Magda Lipińska | Schoolarship Croudfounding</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
 
   <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -17,63 +17,36 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
+ 
 
 
 </head>
 <body>
- <img id="image-me" src="images/ja56.png">
- 
-   <div class="timeline">    
-         <a href="#m-box--start"><div class="color color1"></div></a>
-         <a href="#railsgirls"><div class="color color2"></div></a>
-         <a href="#flatiron"><div class="color color3"></div></a>
-         <a href="#scholarhip"><div class="color color4"></div></a>
-         <a href="#donators"><div class="color color5"></div></a>
-    </div>
+  <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
+      data-name="Fund Magda"
+      data-description="Flatiron School Fund"
+      data-amount="5000">
+    </script>
+    <input type="hidden" name="amount" value="5000">
+  </form>
 
- 
-
-  <div class="elements mustache clothes"
-    
-    data-1920-start="right: -3%; top: 30px; opacity: 0"
-    data-2000-start="right: -3%; top: 30px; opacity: 1"
-    data-2200-start="right: -3%; top: 30px; opacity: 1; transform:rotateX(-360deg)"
-    data-2950-start="right: -3%; top: 30px; opacity: 0">
+  <img id="image-me" src="images/ja56.png">
+  <div class="timeline">    
+   <a href="#m-box--start"><div class="color color1"></div></a>
+   <a href="#railsgirls"><div class="color color2"></div></a>
+   <a href="#flatiron"><div class="color color3"></div></a>
+   <a href="#scholarhip"><div class="color color4"></div></a>
+   <a href="#donators"><div class="color color5"></div></a>
   </div>
-  <div id="skrollr-body">
-    <div class="elements jean clothes"
-      data-start="left: 45.09%; bottom: -321px;"
-      data-1000-start="left: 45.09%; bottom: 217px;"
-      data-1200-start="left: 45.09%; bottom: 217px;"
-      data-2000-start="left: 45.09%; bottom: -321px;"></div>
-    <div class="elements shoes clothes"
-      data-start="left: 44.8%; bottom: -50px;"
-      data-800-start="left: 44.8%; bottom: -50px;"
-      data-1000-start="left: 44.8%; bottom: 190px;"
-      data-1500-start="left: 44.8%; bottom: 190px;"
-      data-2000-start="left: 44.8%; bottom: -50px;"></div>
-    <div class="elements sponge clothes"
-      data-1000-start="left: 47.3%; top: -25px;"
-      data-2000-start="left: 47.3%; top: 155px;"
-      data-2300-start="left: 47.3%; top: 155px;"
-      data-3000-start="left: 47.3%; top: -25px;">
-    </div>
-    <div class="elements basket-bottom clothes"
-      data-1000-start="right: -44%; top: 462px;"
-      data-1999-start="right: 44%; top: 462px;"
-      data-2200-start="right: 44%; top: 462px;"
-      data-3000-start="right: 105%; top: 462px;"></div>
-    <div class="elements shoes-up clothes"
-      data-1000-start="left: 44.7%; bottom: -100px;"
-      data-1999-start="left: 44.7%; bottom: 190px;"
-      data-2200-start="left: 44.7%; bottom: 190px;"
-      data-3000-start="left: 44.7%; bottom: -100px;"></div>
-    <div class="elements trousers clothes"
-      data-2000-start="left: 44.9%; bottom: -350px;"
-      data-2999-start="left: 44.9%; bottom: 236px;"></div>
-    <div class="elements shoes-about clothes"
-      data-2000-start="left: 44.8%; bottom: -70px;"
-      data-2999-start="left: 44.8%; bottom: 190px;"></div>
+
+  <div class="elements mustache clothes" 
+    data-1920-start="right: -3%; top: 5%; opacity: 0"
+    data-2000-start="right: -3%; top: 5%; opacity: 1"
+    data-2200-start="right: -3%; top: 5%; opacity: 1; transform:rotateX(-360deg)"
+    data-2950-start="right: -3%; top: 5%; opacity: 0">
   </div>
 
     <section id="m-box--start">
@@ -87,6 +60,7 @@
         <br/>to know more</p>
       </article>
     </section>
+
     <section id="m-box--railsgirls">
       <article id="railsgirls"> 
         <p>I started in April 2013.</p>
@@ -98,40 +72,29 @@
     </section>
     <section id="m-box--railsgirls-elements" class="m-box--container"
       data-999-start="z-index: 9" data-1999-start="z-index: 1">
+      
       <ul class="m-list-accessories">
-
-        <li class="elements icon tshirt clothes"
-          data-start="left: 40%; top: -500px;"
-          data-1000-start="left: 40%; top: 300px;"
-          data-1300-start="left: 40%; top: 250px;"
-          data-2000-start="left: 40%; top: -500px;">
+        <li class="elements icon github clothes"
+          data-900-start="left: 30%; top: -10%; opacity: 0"
+          data-1100-start="left: 30%; top: 30%; opacity: 1"
+          data-1300-start="left: 30%; top: 30%; opacity: 1"
+          data-2000-start="left: 30%; top: -10%; opacity: 0">
           <a href="http://github.com/lipenco" target="_blank"></a>
         </li>
         <li class="icon computer octocat"
-          data-start="right: -300px; top: 245px; opacity: 0"
-          data-500-start="right: -300px; top: 245px; opacity: 0"
-          data-1000-start="right: 450px; top: 285px; opacity: 1"
-          data-1220-start="right: 450px; top: 285px; opacity: 1"
-           data-2000-start="right: 450px; top: -500px;"></li>
+          data-900-start="left: -110%; top: 25%; opacity: 0"
+          data-1100-start="left: 30%; top: 30%; opacity: 1"
+          data-1300-start="left: 30%; top: 30%; opacity: 1"
+          data-1700-start="left: 0%; top: 30%; opacity: 0">
+        </li>
         <li class="icon rails"
-          data-start="right: -300px; top: 445px; opacity: 0"
-          data-600-start="right: -300px; top: 205px; opacity: 0"
-          data-1000-start="right: 205px; top: 205px; opacity: 1"
-          data-1240-start="right: 205px; top: 205px; opacity: 1"
-           data-2000-start="right: 205px; top: -500px;"></li>
-        <li class="icon tea"
-          data-start="right: -300px; top: 545px; opacity: 0"
-          data-700-start="right: -300px; top: 545px; opacity: 0"
-          data-1000-start="right: 254px; top: 545px; opacity: 1"
-          data-1280-start="right: 254px; top: 545px; opacity: 1"
-          data-1400-start="right: -300px; top: 545px; opacity: 0"></li>
-        <li class="icon headphones elements"
-          data-start="right: -300px; top: 570px; opacity: 0"
-          data-800-start="right: -300px; top: 570px; opacity: 0"
-          data-1000-start="right: 155px; top: 570px; opacity: 1"
-          data-1260-start="right: 155px; top: 570px; opacity: 1"
-          data-1400-start="right: -300px; top: 570px; opacity: 0"></li>
+          data-800-start="right: -20%; top: 25%; opacity: 0"
+          data-1100-start="right: 40%; top: 45%; opacity: 1"
+          data-1300-start="right: 40%; top: 45%; opacity: 1"
+          data-1700-start="right: 0%; top: 45%; opacity: 0">
+        </li>
       </ul>
+
     </section>
     <section id="m-box--flatiron">
       <article id="flatiron">
@@ -142,34 +105,7 @@
         <p>I was <strong>accepted</strong></p>
       </article>
     </section>
-    <section id="m-box--flatiron-elements" class="m-box--container" data-start="z-index: 1" data-1999-start="z-index: 9" data-3000-start="z-index: 8">
-      <ul class="m-list-accessories">
-        <!-- <li class="elements icon bubble clothes"
-     
-      data-1900-start="right: 14.6%; top: 150px; opacity: 0;"
-      data-2100-start="right: 14.6%; top: 150px; opacity: 1;"
-      data-2400-start="right: 14.6%; top: 150px; opacity: 0;"
-      ><a href="http://rgsoc.org" target="_blank"></a></li> -->
-        <li class="icon macbook"
-          data-start="right: -300px; top: 235px; opacity: 0"
-          data-1500-start="right: -300px; top: 235px; opacity: 0"
-          data-2000-start="right: 65px; top: 235px; opacity: 1"
-          data-2220-start="right: 65px; top: 235px; opacity: 1"
-          data-2400-start="right: -300px; top: 235px; opacity: 0"></li>
-        <li class="icon blog elements"
-          data-start="right: -300px; top: 475px; opacity: 0"
-          data-1600-start="right: -300px; top: 475px; opacity: 0"
-          data-2000-start="right: 180px; top: 475px; opacity: 1"
-          data-2240-start="right: 180px; top: 475px; opacity: 1"
-          data-2400-start="right: -300px; top: 475px; opacity: 0"><a href="http://thoughts.sammarkiewi.cz" target="_blank"></a></li>
-        <li class="icon lettering elements"
-          data-start="right: -300px; top: 585px; opacity: 0"
-          data-1600-start="right: -300px; top: 585px; opacity: 0"
-          data-2000-start="right: 110px; top: 585px; opacity: 1"
-          data-2240-start="right: 110px; top: 585px; opacity: 1"
-          data-2400-start="right: -300px; top: 585px; opacity: 0"></li>
-      </ul>
-    </section>
+  
     <section id="m-box--scholarhip">
       <article id="scholarhip">
         <p>Help me unlock next level!</p>
@@ -185,70 +121,63 @@
     <article>
       <p class="donators-title">Awesome people and organisations</p>
 
-   <table class="flat-table flat-table-2">
+   <table class="flat-table flat-table-2" id="my-table">
         <tbody>
         <tr>
-        <td>photo</td>
-        <td>Magda Smith</td>
-        <td>$12.95</td>
-        <td>message</td>
+          <td><img style="width:40px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8"></td>
+          <td>Maria</td>
+          <td>$300</td>
+          <td>trzymam kciuki</td>
         </tr>
-        <tr>
-        <td>photo</td>
-        <td>lola Smith</td>
-        <td>$200.95</td>
-        <td>message sjjsja jsjsjs jsjsj</td>
-        </tr>
-         <tr>
-        <td>photo</td>
-        <td>lola Smith</td>
-        <td>$200.95</td>
-        <td>message sjjsja jsjsjs jsjsj</td>
-        </tr>
-        </tbody>
-</table>
+      </tbody>
+  </table>
 
-
+<script type="text/javascript">
+  $("document").ready(function() {
+      $.getJSON("https://api-fund-lipen-co.herokuapp.com/donations.json", function(data) {
+          $.each(data, function(i, item) {
+              $("#my-table").append("<tr><td><img style='width:40px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.amount + "</td><td>" + item.comment+ "</td></tr>");
+          });
+      });
+  });
+</script>
     </article>
+    
     </section>
     <section id="m-box--scholarhip-elements" class="m-box--container" data-start="z-index: 1" data-3000-start="z-index: 8">
       <ul class="m-list-accessories">
 
         <li class="elements icon bubble clothes"
-      data-2000-start="left: 47%; top: -547px;"
-      data-2999-start="left: 47%; top: 110px;"
-      data-3299-start="left: 47%; top: 110px;"
-      data-3599-start="left: -45.9%; top: 110px;">
+      data-2500-start="left: 47%; top: 5%; opacity:0"
+      data-3299-start="left: 47%; top: 10%; opacity:1"
+      data-3599-start="left: 47%; top: 10%; opacity:1"
+      data-3640-start="left: 0%; top: 10%; opacity:0">
       </li>
 
       <li class="icon poster elements"
-      data-2000-start="left: 49%; top: -547px;"
-      data-2999-start="left: 49%; top: 110px;"
-      data-3299-start="left: 49%; top: 110px;"
-      data-3599-start="left: -45.9%; top: 110px;"><p class="helpme"> Help me spread the word</li> 
+      data-2500-start="left: 49%; top: 5%; opacity:0"
+      data-3299-start="left: 49%; top: 10%; opacity:1"
+      data-3599-start="left: 49%; top: 10%; opacity:1"
+      data-3640-start="left: 0; top: 10%; opacity:0"><p class="helpme"> Help me spread the word</li> 
 
       </ul>
       
       <ul class="elements icon social clothes horizontal-list block" 
-      data-2000-start="left: 48.9%; top: -547px;"
-      data-2999-start="left: 48.9%; top: 300px;"
-      data-3299-start="left: 48.9%; top: 300px;"
-      data-3599-start="left: -44.5%; top: 300px;"> 
+      data-2500-start="left: 52%; top: 5%; opacity:0"
+      data-3299-start="left: 52%; top: 28%; opacity:1"
+      data-3599-start="left: 52%; top: 28%; opacity:1"
+      data-3640-start="left: 0; top: 28%; opacity:0"> 
           <li class="facebook"><p class="icon"><span class="zocial-facebook"><i class="icon-facebook"></i></p></li>
           <li class="twitter2"><p class="icon"><i class="icon-twitter"></i></p></li>
-          <li class="googleplus"><p class="icon"><i class="icon-gplus"></i></p></li>
-          <li class="mailbox"><p class="icon"><i class="icon-mail"></i></p></li> 
-
        </ul>
 
 
 
 
        <li class="icon fund-chart elements"
-          data-start="right: 25px; top: 20px; opacity: 0"
-          data-3900-start="right: -205px; top: 60px; opacity: 0"
-          data-4000-start="right: 25px; top: 60px; opacity: 1"
-          data-4700-start="right: 25px; top: 60px; opacity: 1">
+          data-3900-start="right: -20%; top: 60px; opacity: 1"
+          data-4000-start="right: 20%; top: 60px; opacity: 1"
+          data-4700-start="right: 20%; top: 60px; opacity: 1">
      <div class=" container left-container">
       <div class="donut-chart-block block"> 
             <h2 class="titular">DONATIONS STATS</h2>
@@ -272,7 +201,6 @@
         <a class="sign-in button" href="#">DONATE</a>
       </div>
 </li> 
-        
     
     </section>
     <footer>
@@ -310,16 +238,17 @@
         
         </script>
 
-
- 
-
-
- 
   <script type="text/javascript">
-  skrollr.init({
-  forceHeight: false
-});
+        skrollr.init({
+        forceHeight: false
+      });
   </script>
+
+ 
+
+
+ 
+ 
   
  
  
