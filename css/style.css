@@ -1,14 +1,13 @@
 body {font-size: .85em;}
-header {position: fixed; background: #fff; color: #fff; height: 90px; width: 100%; z-index: 100}
-header h1 {width: 95px; height: 91px; text-indent: -999em; display: block; position: absolute; top: 0px; left: 10px; background: transparent url('images/logo.png') center center no-repeat;}
 
 .step-1 a {background: #ffffff}
 .step-2 a {background: #1abc9c}
 .step-3 a {background:#e74c3c}
 .step-4 a {background: #9b59b6}
 
-section {height: 1000px; width: 100%; z-index: 7; }
-#skrollr-body, #m-box--railsgirls-elements, #m-box--flatiron-elements, #m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px;overflow: hidden;}
+section { width: 100%; z-index: 7; }
+#skrollr-body, #m-box--railsgirls-elements, #m-box--flatiron-elements, 
+#m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px;overflow: hidden;}
 #image-me {
 position: fixed;
 top:0;
@@ -17,6 +16,7 @@ height: 100%;
 }
 #body {max-width: 1000px; margin: 0 auto;  height: 1000px; display: block; z-index: 1;}
 article {max-width: 1000px; margin: 0 auto; height: 1000px; display: block; }
+
 article p {position: relative; z-index: 20}
 article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .list-intro{font-family: 'Lato', sans-serif; font-size: .9em;}
@@ -28,6 +28,7 @@ strong {font-weight: 700;}
 #m-box--railsgirls p, #m-box--start p, #m-box--flatiron p, #m-box--scholarhip p {color: white; padding: 0 0 .7em 1.5em; font-size: 1.3em; font-weight: 300; line-height: 1.6em; width: 355px; }
 #m-box--start article {}
 #m-box--scholarhip article {}
+#donators article {height: auto; min-height: 800px;}
 #m-box--railsgirls p, #m-box--railsgirls a {color: #d1edec;}
 #m-box--flatiron p, #m-box--flatiron a{color: #fae2be;}
 #m-box--scholarhip p, #m-box--scholarhip a {color: #f8f1e1;}
@@ -95,7 +96,7 @@ strong {font-weight: 700;}
 
 .m-list-accessories li{display: block; position: absolute;}
 .elements { display: block; position: absolute;}
-.elements a {width: 100%; height: 100%; display: block; text-indent: -999em}
+.elements a {width: 100%; height: 100%; display: block; font-family: 'Lato';}
 .clothes {z-index: 11;}
 .censor {width:320px;  height: 160px; margin-left: -91px; z-index: 22 !important;background: transparent url('') 0 0 no-repeat; z-index: 11; position: fixed;}
 .tshirt {width:951px;  height: 259px; background: transparent url('../images/github2.jpg') 0 0 no-repeat; z-index: 9;}
@@ -113,7 +114,6 @@ strong {font-weight: 700;}
 .icon { display: block; margin-top: -10px}
 .octocat {width: 120px; height: 120px; background: transparent url('../images/octocat.jpg') 0 0 no-repeat; z-index: 9; }
 .rails {width: 225px; height: 60px; background: transparent url('../images/rails.png') 0 0 no-repeat; z-index: 9;}
-.tea {width: 69px; height: 91px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .headphones {width: 79px; height: 73px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .bubble {width: 420px; height: 400px; background: transparent url('../images/bubble.png') 0 0 no-repeat; z-index: 9;}
 .basket-bottom {width: 116px; height: 135px; background: transparent url('images/short.png') 0 0 no-repeat; z-index: 9;}
@@ -121,7 +121,7 @@ strong {font-weight: 700;}
 .macbook {width: 252px; height: 199px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .blog {width: 139px; height: 90px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .poster {width: 170px; height: 156px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
-/*.twitter {width: 300px; height: 84px; background: transparent url('images/twitter.gif') 0 0 no-repeat; z-index: 7;}*/
+.fund-chart {width: 300px; height: 584px;  z-index: 1;}
 .sponge {width: 43px; height: 8px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .shirt {width: 155px; height: 247px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 
@@ -129,7 +129,17 @@ strong {font-weight: 700;}
 .shoes-about {width: 115px; height: 48px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 .lettering {width: 200px; height: 150px; background: transparent url('') 0 0 no-repeat; z-index: 9;}
 
-#donators {background: #f1c40f; opacity: 0.9; position: relative; z-index: 12; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
+#donators {
+  background: #f1c40f; opacity: 0.9; 
+  position: relative; z-index: 12; 
+  color: white;
+  font-family: 'Lato'; 
+  font-weight: 300; 
+  text-align: center; 
+  padding: 2.5em 0 2.5em; 
+  overflow: hidden;
+  z-index: 0;
+}
 footer {background: #f1c40f; position: relative; z-index: 12; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
 footer ul, nav ul, .opt-nav-mobile {text-align: center; margin: 1em 0 0;}
 footer li, nav li, .opt-nav li, .opt-nav-mobile li {display: inline-block; margin: 0 .5em; font-size: 1.1em; line-height: 1}
@@ -203,26 +213,7 @@ footer span, .opt-nav span, .opt-nav-mobile span {display: block; text-indent: -
 
 
 
-@media only screen and (max-width: 1000px) {
-  header, footer, 
-  .elements, #image-me, .elements, .rails, .octocat { display: none !important; 
-    height: auto !important }
-  section#m-box--mobile {
-    position: relative; 
-    display: block; 
-    z-index: 1000; 
-    width: 90%; 
-    text-align: center; 
-    padding: 230px 5% 0; 
-    color: #444; 
-    background: transparent url('images/logo-mobile.png') top center no-repeat; 
-    font-family: 'Lato', sans-serif; 
-    font-size: 1.2em; 
-    height: auto;
-    line-height: 1.6em; 
-    font-weight: 300;
-  }
-}
+
 
 
 
@@ -362,8 +353,8 @@ h1, h2, p, a, span{
   
   /** CONTAINERS **/
   .container {
-    float: right;
     width: 300px;
+    z-index: 999999;
   }
     .block {
       margin-bottom: 5px;
@@ -509,7 +500,11 @@ background: #cc324b;
 .sign-in.button {
 background: #e64c65;
 margin: 0 auto;
+
 }
+
+
+
   
 .social {
         height: 43px;
@@ -562,6 +557,13 @@ margin: 0 auto;
   line-height: 1.4em;
   text-align: center;
   font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+  header,  #image-me, .elements, .rails, .octocat {
+   display: none !important; 
+    height: auto !important }
+
 }
             
 
