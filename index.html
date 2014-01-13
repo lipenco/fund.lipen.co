@@ -17,11 +17,61 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
+   <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+   
+      $('.donate-button').click(function(event){
+       event.preventDefault();
+        var self = $(this);
+        var amount = 0;
+        if (self.attr('data-custom')) {
+          amount = $('#custom-donation-amount').val();
+          if (amount === "") {
+            amount = 75;
+          }
+        } else {
+          amount = self.attr('data-amount');
+        }
+        amount = Math.abs(amount * 100);
+
+        var package = self.attr('data-name');
+
+        var token = function(res) {
+          $('input[name="stripe_card_token"]').val(res.id);
+          $('input[name="amount"]').val(amount);
+          $('form#stripe-form').submit();
+        };
+        var description = package == 'Custom' ? 'Your donation' : package + ' Sponsorship';
+
+        StripeCheckout.open({
+          key:    'pk_test_FTZOOu9FL0iYJmkTMa2udiLo',
+          address:     false,
+          amount:      amount,
+          currency:    'usd',
+          name:        'Fund Magda',
+          description: "Flat Iron Fund",
+          panelLabel:  'Donate',
+          token:       token
+        });
+
+        return false;
+      });
+ });
+
+</script>
  
 
 
 </head>
 <body>
+
+
+
+
+
+
+<!-- 
   <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
     <script
       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -31,7 +81,7 @@
       data-amount="5000">
     </script>
     <input type="hidden" name="amount" value="5000">
-  </form>
+  </form> -->
 
   <img id="image-me" src="images/ja56.png">
   <div class="timeline">    
@@ -68,6 +118,8 @@
         <p>Playing with css at the beginning was fun. Than I wanted to add more magic to my projects and got my hands/head dirty with JavaScript.<br/>
         In July something big happened - I got <strong>Rails Girls Summer of Code</strong> Schoolarship.</p>
         <p>During three intense months I was contributing to  <a href="impress.js" target="_blank"><strong>impress.js</strong></a> opensource project</p>
+
+
       </article>
     </section>
     <section id="m-box--railsgirls-elements" class="m-box--container"
@@ -103,6 +155,7 @@
         <p> After developer internsihip in Tokyo I was sure that I want to build awesome applications</p>
         <p> To level up my skills I applied to <strong>Flatiron School</strong> for three-month intense rails program.</p>
         <p>I was <strong>accepted</strong></p>
+
       </article>
     </section>
   
@@ -118,47 +171,75 @@
       </article>
     </section>
     <section id="donators">
+
     <article>
       <p class="donators-title">Awesome people and organisations</p>
 
    <table class="flat-table flat-table-2" id="my-table">
         <tbody>
         <tr>
-          <td><img style="width:40px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8"></td>
+          <td><img style="width:50px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8"></td>
           <td>Maria</td>
-          <td>$300</td>
           <td>trzymam kciuki</td>
         </tr>
+        
       </tbody>
   </table>
+ 
+
+
+
+ 
+
+
+
+
+ 
+
 
 <script type="text/javascript">
   $("document").ready(function() {
       $.getJSON("https://api-fund-lipen-co.herokuapp.com/donations.json", function(data) {
           $.each(data, function(i, item) {
-              $("#my-table").append("<tr><td><img style='width:40px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.amount + "</td><td>" + item.comment+ "</td></tr>");
+              $("#my-table").prepend("<tr><td><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
+
           });
+          var i = data.length;
+          $("#nodonors").text(i+1);
+
+          var val = 0;
+          $.each(data, function(){
+              val += this.amount;
+          });
+          $(".total").text(8000 - 300 - val);
+          var procentage = (val + 300)/8000 * 100;
+          $('#procentage').text(procentage);
+
       });
   });
 </script>
     </article>
-    
+
     </section>
-    <section id="m-box--scholarhip-elements" class="m-box--container" data-start="z-index: 1" data-3000-start="z-index: 8">
+    <section id="m-box--scholarhip-elements"  data-start="z-index: 1" data-3000-start="z-index: 8">
       <ul class="m-list-accessories">
 
         <li class="elements icon bubble clothes"
       data-2500-start="left: 47%; top: 5%; opacity:0"
       data-3299-start="left: 47%; top: 10%; opacity:1"
       data-3599-start="left: 47%; top: 10%; opacity:1"
-      data-3640-start="left: 0%; top: 10%; opacity:0">
+      data-3640-start="left: 0%; top: 10%; opacity:0"
+      data-3645-start="left: 0; top: 10%; display:block"
+      data-3650-start="left: 0; top: 10%; display:none">
       </li>
 
       <li class="icon poster elements"
       data-2500-start="left: 49%; top: 5%; opacity:0"
       data-3299-start="left: 49%; top: 10%; opacity:1"
       data-3599-start="left: 49%; top: 10%; opacity:1"
-      data-3640-start="left: 0; top: 10%; opacity:0"><p class="helpme"> Help me spread the word</li> 
+      data-3640-start="left: 0; top: 10%; opacity:0"
+      data-3645-start="left: 0; top: 10%; display:block"
+      data-3650-start="left: 0; top: 10%; display:none"><p class="helpme"> Help me spread the word</li> 
 
       </ul>
       
@@ -166,42 +247,44 @@
       data-2500-start="left: 52%; top: 5%; opacity:0"
       data-3299-start="left: 52%; top: 28%; opacity:1"
       data-3599-start="left: 52%; top: 28%; opacity:1"
-      data-3640-start="left: 0; top: 28%; opacity:0"> 
+      data-3640-start="left: 0; top: 28%; opacity:0"
+      data-3645-start="left: 0; top: 10%; display:block"
+      data-3650-start="left: 0; top: 10%; display:none"> 
           <li class="facebook"><p class="icon"><span class="zocial-facebook"><i class="icon-facebook"></i></p></li>
           <li class="twitter2"><p class="icon"><i class="icon-twitter"></i></p></li>
        </ul>
 
-
-
-
+    <ul>
        <li class="icon fund-chart elements"
           data-3900-start="right: -20%; top: 60px; opacity: 1"
           data-4000-start="right: 20%; top: 60px; opacity: 1"
           data-4700-start="right: 20%; top: 60px; opacity: 1">
-     <div class=" container left-container">
-      <div class="donut-chart-block block"> 
-            <h2 class="titular">DONATIONS STATS</h2>
-            <div class="donut-chart">
+           <div class=" container left-container">
+            <div class="donut-chart-block block"> 
+              <h2 class="titular">DONATIONS STATS</h2>
+               <div class="donut-chart">
                <canvas id="canvas" height="200" width="200"></canvas>
-                 
-                <p class="center-date">$ 3 700<br><span class="scnd-font-color">TO GO</span></p> 
-            </div>
-          <ul class="os-percentages horizontal-list">
+                <p class="center-date"><span class="total"></span><br/><span class="scnd-font-color">TO GO</span></p> 
+               </div>
+              <ul class="os-percentages horizontal-list">
                 <li>
-                    <p class="ios os scnd-font-color">DONATORS</p>
-                    <p class="os-percentage">85<sup></sup></p>
+                    <p class="ios os scnd-font-color">DONORS</p>
+                    <p id="nodonors" class="os-percentage"><sup></sup></p>
                 </li>
                 <li>
                     <p class="mac os scnd-font-color">FOUND</p>
-                    <p class="os-percentage">54<sup>%</sup></p>
+                    <p class="os-percentage"><span id="procentage">54</span><sup>%</sup></p>
                 </li>
-           
             </ul> 
         </div>
-        <a class="sign-in button" href="#">DONATE</a>
       </div>
-</li> 
-    
+       <form onsubmit="return false" class="custom-donation">
+          <input type="number" id="custom-donation-amount" placeholder="50.00" min="0" step="10.00"/>
+        <a href="#" class="donate-button sign-in button" data-custom="true" data-name="Custom">  DONATE </a>
+      </form>   
+        <p class="stripe-note">Secure Payments by <a href="https://stripe.com/blog/stripe-checkout">Stripe Checkout</a></p>
+    </li>  
+  </ul>
     </section>
     <footer>
       <p>Lipen.co - 2014</p>
@@ -243,7 +326,7 @@
         forceHeight: false
       });
   </script>
-
+ 
  
 
 
