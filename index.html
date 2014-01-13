@@ -124,6 +124,31 @@
         
       </tbody>
   </table>
+
+  <div id="mobile-chart">
+      <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
+       <input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
+  <input type="hidden" id="amount-cents" name="amount" value="5000"/>
+    <script
+      src="https://checkout.stripe.com/checkout.js" id="stripe-button" class="stripe-button"
+      data-image="images/button.png"
+      data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
+      data-name="Fund Magda"
+      data-label= "DONATE"
+      data-description="Flatiron School Fund"
+      ></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#custom-donation-amount').blur(function(event) {
+          var amount = $('#custom-donation-amount').val()*100;
+          $('#amount-cents').val(amount);
+          $('#stripe-button').data('amount', amount);
+        });
+      });
+    </script>
+    <p class="stripe-note">Secure Payments by <a href="https://stripe.com/blog/stripe-checkout">Stripe Checkout</a></p>
+  </form> 
+</div>
  
 
 
@@ -235,8 +260,8 @@
             </ul> 
         </div>
       </div>
-  <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
-     <div class="left-inner-addon"> 
+      <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
+      <div class="left-inner-addon"> 
        <span>$</span><input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
     </div>
   <input type="hidden" id="amount-cents" name="amount" value="5000"/>

@@ -262,15 +262,7 @@ h1, h2, p, a, span{
         outline: none; /* removes the default orange border when focus */
         border: 1px solid #11a8ab;
       }
-  .input-icon {
-    font-size: 22px;
-    position: absolute;
-    left: 31px;
-    top: 10px;
-  }
-    .input-icon.password-icon {
-      left: 35px;
-    }
+
 
 .horizontal-list {
   margin: 0;
@@ -675,6 +667,19 @@ margin-top: 5px;
   width: 650px;
 
 }
+
+#mobile-chart {
+  display: none;
+}
+
+#mobile-chart input {
+background-color: #e64c65;
+border: 1px solid #cc324b;
+padding: 5px;
+border-radius: 5px;
+float: center;
+
+}
  
 
 
@@ -690,7 +695,9 @@ margin-top: 5px;
     text-align: left;
    }
 
-    
+   #mobile-chart {
+    display: block;
+   } 
 
 }
 
