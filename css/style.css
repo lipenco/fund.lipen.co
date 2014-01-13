@@ -112,7 +112,7 @@ strong {font-weight: 700;}
   overflow: hidden;
   z-index: 0;
 }
-footer {background: #f1c40f;  position: relative; z-index: 7; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
+footer {background: #f1c40f;  position: relative; z-index: 8; color: white;font-family: 'Lato'; font-weight: 300; text-align: center; padding: 2.5em 0 2.5em; overflow: hidden}
 footer ul, nav ul, .opt-nav-mobile {text-align: center; margin: 1em 0 0;}
 footer li, nav li, .opt-nav li, .opt-nav-mobile li {display: inline-block; margin: 0 .5em; font-size: 1.1em; line-height: 1}
 footer a {color: white;}
