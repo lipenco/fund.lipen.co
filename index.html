@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="css/animation.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
-    <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js">
-    </script>
+    <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
     
   </head>
   <body>
@@ -526,17 +525,30 @@
     </footer>
     
     
-    <script type="text/javascript" src="http://www.chartjs.org/assets/Chart.js">
-    </script>
+ 
     <script src="https://checkout.stripe.com/v2/checkout.js">
     </script>
-    
+
     <script type="text/javascript">
-      skrollr.init({
-        forceHeight: false
+      if(!window.devicePixelRatio){
+        var pixelRatio = 1;
       }
-                  );
+      else{
+        var pixelRatio = window.devicePixelRatio;
+      }
+      var bigscreen = Math.max(screen.width,screen.height) / pixelRatio;
     </script>
+
+      <script type="text/javascript">
+        if(bigscreen >= 640){
+          document.write('<script src="http://www.chartjs.org/assets/Chart.js"><\/script>');
+           skrollr.init({
+          forceHeight: false
+          });
+        }
+      </script>
+    
+    
     
     
     
