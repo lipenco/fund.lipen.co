@@ -12,23 +12,15 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/animation.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
-   <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+  <script src="https://checkout.stripe.com/v2/checkout.js"></script>
 
 </head>
 <body>
-
-
-
-
-
-
-
- 
 
   <img id="image-me" src="images/ja56.png">
   <div class="timeline">    
@@ -191,8 +183,8 @@
 
         <li class="elements icon bubble clothes"
       data-2500-start="left: 47%; top: 5%; opacity:0"
-      data-3299-start="left: 47%; top: 10%; opacity:1"
-      data-3599-start="left: 47%; top: 10%; opacity:1"
+      data-3199-start="left: 47%; top: 10%; opacity:1"
+      data-3499-start="left: 47%; top: 10%; opacity:1"
       data-3640-start="left: 0%; top: 10%; opacity:0"
       data-3645-start="left: 0; top: 10%; display:block"
       data-3650-start="left: 0; top: 10%; display:none">
@@ -200,8 +192,8 @@
 
       <li class="icon poster elements"
       data-2500-start="left: 49%; top: 5%; opacity:0"
-      data-3299-start="left: 49%; top: 10%; opacity:1"
-      data-3599-start="left: 49%; top: 10%; opacity:1"
+      data-3199-start="left: 49%; top: 10%; opacity:1"
+      data-3499-start="left: 49%; top: 10%; opacity:1"
       data-3640-start="left: 0; top: 10%; opacity:0"
       data-3645-start="left: 0; top: 10%; display:block"
       data-3650-start="left: 0; top: 10%; display:none"><p class="helpme"> Help me spread the word</li> 
@@ -210,8 +202,8 @@
       
       <ul class="elements icon social clothes horizontal-list block" 
       data-2500-start="left: 52%; top: 5%; opacity:0"
-      data-3299-start="left: 52%; top: 28%; opacity:1"
-      data-3599-start="left: 52%; top: 28%; opacity:1"
+      data-3199-start="left: 52%; top: 28%; opacity:1"
+      data-3499-start="left: 52%; top: 28%; opacity:1"
       data-3640-start="left: 0; top: 28%; opacity:0"
       data-3645-start="left: 0; top: 10%; display:block"
       data-3650-start="left: 0; top: 10%; display:none"> 
@@ -222,8 +214,8 @@
     <ul>
        <li class="icon fund-chart elements"
           data-3900-start="right: -20%; top: 60px; opacity: 1"
-          data-4000-start="right: 20%; top: 60px; opacity: 1"
-          data-4700-start="right: 20%; top: 60px; opacity: 1">
+          data-4000-start="right: 20%; top: 30px; opacity: 1"
+          data-4000-start="right: 20%; top: 30px; opacity: 1">
            <div class=" container left-container">
             <div class="donut-chart-block block"> 
               <h2 class="titular">DONATIONS STATS</h2>
@@ -244,14 +236,16 @@
         </div>
       </div>
   <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
-  <input type="number" id="custom-donation-amount" placeholder="50.00" min="0" step="10.00"/>
-    
+  <div class="left-inner-addon">
+        
+       <span>$</span><input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
+    </div>
+  <input type="hidden" id="amount-cents" name="amount" value="5000"/>
     <script
-      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      src="https://checkout.stripe.com/checkout.js" id="stripe-button" class="stripe-button"
       data-image="images/button.png"
       data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
       data-name="Fund Magda"
-      data-amount="5000"
       data-label= "DONATE"
       data-description="Flatiron School Fund"
 
@@ -261,13 +255,14 @@
 
     <script type="text/javascript">
       $(function() {
-        $('#custom-donation-amount').click(function(event) {
-            console.log("kilk");
-            var amount = $('#custom-donation-amount').val()*100;
-            document.querySelector('.stripe-button').setAttribute('data-amount', amount.toString())        
-            // $('.stripe-button').data('amount', amount.toString())
+        $('#custom-donation-amount').blur(function(event) {
+          var amount = $('#custom-donation-amount').val()*100;
+          $('#amount-cents').val(amount);
+          $('#stripe-button').data('amount', amount);
         });
-    });
+      
+       
+      });
     </script>
 
   </form> 
@@ -276,16 +271,13 @@
 
   .stripe-button-el span { 
   display: block;
-  width: 191px;
+  width: 194px;
   height: 48px;
   line-height: 48px;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
-  margin: 0 auto;
-
-
-  border-radius: 5px;
+  margin: 0;
   border:none;
   -webkit-transition: background .3s;
   transition: background .3s;
