@@ -1,10 +1,5 @@
 body {font-size: .85em;}
 
-.step-1 a {background: #ffffff}
-.step-2 a {background: #1abc9c}
-.step-3 a {background:#e74c3c}
-.step-4 a {background: #9b59b6}
-
 section { width: 100%; z-index: 7; }
 #skrollr-body, #m-box--flatiron-elements,  #m-box--railsgirls-elements,
 #m-box--scholarhip-elements {position: fixed; width: 100%; left: 50%; margin-left: -500px;  top: 0; height: 1000px; overflow: hidden;}
@@ -17,7 +12,7 @@ height: 100%;
 
 
 
-article {max-width: 1000px; margin: 0 auto; height: 1000px; display: block; }
+article {max-width: 1000px; margin: 0 auto; height: 1000px;  }
 
 article p {position: relative; z-index: 20}
 article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
@@ -68,13 +63,11 @@ strong {font-weight: 700;}
 }
 
 #m-box--flatiron {background-color:#e74c3c; }
-#m-box--railsgirls ul {float: right; margin: 405px 50px 0 0;}
-#m-box--railsgirls-elements .list-intro {color: #0e6261;}
-#m-box--flatiron-elements .list-intro {color: #1abc9c}
 
 
 
-.m-list-accessories li{display: block; position: absolute;}
+
+.m-list-accessories li {display: block; position: absolute;}
 .elements { display: block; position: absolute;}
 .props {z-index: 11;}
 .mustache {width:320px;  height: 200px; margin-left: -91px; z-index: 22 !important;background: transparent url('../images/mustache.png') 0 0 no-repeat; z-index: 11; position: fixed;}
@@ -104,23 +97,7 @@ footer {background: #f1c40f;  position: relative; z-index: 8; color: white;font-
 footer ul, nav ul, .opt-nav-mobile {text-align: center; margin: 1em 0 0;}
 footer li, nav li, .opt-nav li, .opt-nav-mobile li {display: inline-block; margin: 0 .5em; font-size: 1.1em; line-height: 1}
 footer a {color: white;}
-nav li a {color: #444;}
-.opt-nav {border-top: 1px solid white; margin: 2em 0 0; padding: 1.5em 0 0; overflow: hidden;  text-align: center; }
-.opt-nav-mobile {border-top: 1px solid #ccc;margin: 2em 0 0; padding: 1.5em 0 0; font-size: 1.5em; }
-.opt-nav li, .opt-nav-mobile li {margin: 0 .15em;}
-.opt-nav a, .opt-nav-mobile a {color: #ddd;}
-nav li {margin: 0 .25em 0 0;}
-nav a {width: 15px; height: 15px; border-radius: 50%; display: block; border: 3px solid #efefef; text-indent:-999em;}
-nav ul {position: absolute; text-align: center; top: 15px; right: 15px}
-#show-tips a{text-indent: 0; text-align: center; font-family: 'Lato', sans-serif;  text-decoration: none; font-weight: 700; border: 3px solid white; line-height: 1.3em;}
 footer span, .opt-nav span, .opt-nav-mobile span {display: block; text-indent: -999em}
-
-
-#close {color: white; position: absolute; z-index: 5; top: 10px; right: 10px; font-weight: 700; text-decoration: none}
-
-
-
-
 
 
 
@@ -220,9 +197,6 @@ h1, h2, p, a, span{
     font-family: 'Lato';
   }
 
-.input-container {
-  position: relative;
-}
   input[type=text]{
     width: 260px;
     height: 50px;
@@ -313,55 +287,8 @@ h1, h2, p, a, span{
       background: #394264;
       border-radius: 5px;
     }
-    /******************************************** LEFT CONTAINER *****************************************/
     .left-container {}
-      .menu-box {
-        height: 360px;
-      }
-        .menu-box .titular {
-          background: #11a8ab;
-        }
-        .menu-box-menu .icon {
-          display: inline-block;
-          vertical-align: top;
-          width: 28px;
-          margin-left: 20px;
-          margin-right: 15px;
-        }
-        .menu-box-number {
-          width: 36px;
-          line-height: 22px;
-          background: #50597b;
-          text-align: center;
-          border-radius: 15px;
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          -webkit-transition: all .3s;
-          transition: all .3s;
-        }
-        .menu-box-menu li{
-          height: 60px;
-          position: relative;                   
-        }
-        .menu-box-tab {
-          line-height: 60px;
-          display: block;
-          border-bottom: 1px solid #1f253d;
-          -webkit-transition: background .2s;
-          transition: background .2s;
-        }
-          .menu-box-tab:hover {
-            background: #50597b;
-            border-top: 1px solid #1f253d;
-            text-decoration: none;
-          }
-          .menu-box-tab:hover .icon {
-            color: #fff;
-          }
-          .menu-box-tab:hover .menu-box-number {
-            background: #e64c65;
-          }
+      
       .donut-chart-block {
         height: 434px;
       }
@@ -371,9 +298,7 @@ h1, h2, p, a, span{
         .donut-chart {
           height: 270px;
         }
-        /******************************************
-        DONUT-CHART by @kseso http://codepen.io/Kseso/pen/phiyL
-        ******************************************/
+    
           .donut-chart {
             position: relative;
             width: 200px;
@@ -397,13 +322,7 @@ h1, h2, p, a, span{
           .center-date span.scnd-font-color {
            line-height: 0; 
           }
-          .recorte {
-              border-radius: 50%;
-              clip: rect(0px, 200px, 200px, 100px);
-              height: 100%;
-              position: absolute;
-              width: 100%;
-            }
+        
           
         .os-percentages {
           padding-top: 32px;
@@ -605,57 +524,6 @@ margin-top: 5px;
 
 
 
-  .avatar {
-  margin: 0.2em;
-  position: relative;
-  width: 128px;
-  height: 128px;
-  float: left;
-}
-.avatar .image {
-  border-radius: 100% 100% 100% 100%;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border: 1px solid #4C6CAE;
-  opacity: 0.8;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  overflow: hidden;
-}
-.avatar .info {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  color: #3c568b;
-  font-family: Tahoma, sans-serif;
-  font-size: 70%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.avatar:hover .image {
-  border-radius: 10%;
-  cursor: pointer;
-  border: 1px solid #3c568b;
-  opacity: 1;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.avatar:hover .info {
-  opacity: 1;
-  bottom: -2em;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-.avatars {
-  z-index: 9999999999;
-  width: 650px;
-
-}
-
 #mobile-chart {
   display: none;
 }
@@ -674,7 +542,7 @@ float: center;
 
 
 @media only screen and (max-width: 1000px) {
-   #image-me, .rails, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .github , .bubble, .social, .poster {
+   #image-me, .rails, .m-list-accessories li, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .github , .bubble, .social, .poster {
    display: none; 
    }
 
