@@ -32,10 +32,10 @@
   </div>
 
   <div class="elements mustache clothes" 
-    data-1920-start="right: -3%; top: 5%; opacity: 0"
-    data-2000-start="right: -3%; top: 5%; opacity: 1"
-    data-2200-start="right: -3%; top: 5%; opacity: 1; transform:rotateX(-360deg)"
-    data-2950-start="right: -3%; top: 5%; opacity: 0">
+    data-1920-start="right: -2%; top: 5%; opacity: 0"
+    data-2000-start="right: -2%; top: 5%; opacity: 1"
+    data-2200-start="right: -2%; top: 5%; opacity: 1; transform:rotateX(-360deg)"
+    data-2950-start="right: -2%; top: 5%; opacity: 0">
   </div>
 
     <section id="m-box--start">
@@ -236,8 +236,7 @@
         </div>
       </div>
   <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
-  <div class="left-inner-addon">
-        
+     <div class="left-inner-addon"> 
        <span>$</span><input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
     </div>
   <input type="hidden" id="amount-cents" name="amount" value="5000"/>
@@ -248,11 +247,7 @@
       data-name="Fund Magda"
       data-label= "DONATE"
       data-description="Flatiron School Fund"
-
       ></script>
-
-     
-
     <script type="text/javascript">
       $(function() {
         $('#custom-donation-amount').blur(function(event) {
@@ -264,8 +259,9 @@
        
       });
     </script>
-
+    <p class="stripe-note">Secure Payments by <a href="https://stripe.com/blog/stripe-checkout">Stripe Checkout</a></p>
   </form> 
+  </li>
 
   <style type="text/css">
 
@@ -294,15 +290,7 @@ margin: 0 auto;
 
 
   </style>
-
-
-
-
-      <!--  <form onsubmit="return false" class="custom-donation" >
-          <input type="number" id="custom-donation-amount" placeholder="50.00" min="0" step="10.00"/>
-        <a href="#" class="donate-button sign-in button" data-custom="true" data-name="Custom" >  DONATE </a>
-      </form>   --> 
-        <p class="stripe-note">Secure Payments by <a href="https://stripe.com/blog/stripe-checkout">Stripe Checkout</a></p>
+        
     </li>  
   </ul>
     </section>

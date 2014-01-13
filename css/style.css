@@ -681,9 +681,16 @@ margin-top: 5px;
 
 
 @media only screen and (max-width: 1000px) {
-  header,  #image-me, .rails, .octocat, .mustache , .github , .bubble, .social, .poster{
+   #image-me, .rails, .octocat, .fund-chart, .mustache , .github , .bubble, .social, .poster {
    display: none !important; 
    }
+
+   #m-box--railsgirls p, #donators .donators-title, #m-box--start p, #m-box--flatiron p, #m-box--scholarhip p {
+    width: 280px;
+    text-align: left;
+   }
+
+    
 
 }
 
