@@ -686,8 +686,8 @@ float: center;
 
 
 @media only screen and (max-width: 1000px) {
-   #image-me, .rails, .octocat, .fund-chart, .mustache , .github , .bubble, .social, .poster {
-   display: none !important; 
+   #image-me, .rails, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .github , .bubble, .social, .poster {
+   display: none; 
    }
 
    #m-box--railsgirls p, #donators .donators-title, #m-box--start p, #m-box--flatiron p, #m-box--scholarhip p {
