@@ -18,50 +18,6 @@
   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
   <script type="text/javascript" src="js/smoothscroll.js"></script>
    <script src="https://checkout.stripe.com/v2/checkout.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-   
-      $('.donate-button').click(function(event){
-       event.preventDefault();
-        var self = $(this);
-        var amount = 0;
-        if (self.attr('data-custom')) {
-          amount = $('#custom-donation-amount').val();
-          if (amount === "") {
-            amount = 75;
-          }
-        } else {
-          amount = self.attr('data-amount');
-        }
-        amount = Math.abs(amount * 100);
-
-        var package = self.attr('data-name');
-
-        var token = function(res) {
-          $('input[name="stripe_card_token"]').val(res.id);
-          $('input[name="amount"]').val(amount);
-          $('form#stripe-form').submit();
-        };
-        var description = package == 'Custom' ? 'Your donation' : package + ' Sponsorship';
-
-        StripeCheckout.open({
-          key:    'pk_test_FTZOOu9FL0iYJmkTMa2udiLo',
-          address:     false,
-          amount:      amount,
-          currency:    'usd',
-          name:        'Fund Magda',
-          description: "Flat Iron Fund",
-          panelLabel:  'Donate',
-          token:       token
-        });
-
-        return false;
-      });
- });
-
-</script>
- 
-
 
 </head>
 <body>
@@ -71,17 +27,8 @@ $(document).ready(function() {
 
 
 
-<!-- 
-  <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
-    <script
-      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
-      data-name="Fund Magda"
-      data-description="Flatiron School Fund"
-      data-amount="5000">
-    </script>
-    <input type="hidden" name="amount" value="5000">
-  </form> -->
+
+ 
 
   <img id="image-me" src="images/ja56.png">
   <div class="timeline">    
@@ -212,8 +159,26 @@ $(document).ready(function() {
               val += this.amount;
           });
           $(".total").text(8000 - 300 - val);
-          var procentage = (val + 300)/8000 * 100;
+          var procentage = Math.round((val + 300)/8000 * 100);
           $('#procentage').text(procentage);
+
+          var options = {
+            segmentShowStroke : false,
+            percentageInnerCutout : 80,
+            };
+             var doughnutData = [
+                                {
+                                        value: val,
+                                        color:"#1abc9c" 
+                                },
+                                {
+                                        value : 8000-val,
+                                        color : "#262d44"
+                                },
+                        
+                        ];
+
+        var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData, options);
 
       });
   });
@@ -264,24 +229,87 @@ $(document).ready(function() {
               <h2 class="titular">DONATIONS STATS</h2>
                <div class="donut-chart">
                <canvas id="canvas" height="200" width="200"></canvas>
-                <p class="center-date"><span class="total"></span><br/><span class="scnd-font-color">TO GO</span></p> 
+                <p class="center-date">$<span class="total"></span><br/><span class="scnd-font-color">TO GO</span></p> 
                </div>
               <ul class="os-percentages horizontal-list">
                 <li>
                     <p class="ios os scnd-font-color">DONORS</p>
-                    <p id="nodonors" class="os-percentage"><sup></sup></p>
+                    <p id="nodonors" class="os-percentage">0<sup></sup></p>
                 </li>
                 <li>
                     <p class="mac os scnd-font-color">FOUND</p>
-                    <p class="os-percentage"><span id="procentage">54</span><sup>%</sup></p>
+                    <p class="os-percentage"><span id="procentage">0</span><sup>%</sup></p>
                 </li>
             </ul> 
         </div>
       </div>
-       <form onsubmit="return false" class="custom-donation">
+  <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
+  <input type="number" id="custom-donation-amount" placeholder="50.00" min="0" step="10.00"/>
+    
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-image="images/button.png"
+      data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
+      data-name="Fund Magda"
+      data-amount="5000"
+      data-label= "DONATE"
+      data-description="Flatiron School Fund"
+
+      ></script>
+
+     
+
+    <script type="text/javascript">
+      $(function() {
+        $('#custom-donation-amount').click(function(event) {
+            console.log("kilk");
+            var amount = $('#custom-donation-amount').val()*100;
+            document.querySelector('.stripe-button').setAttribute('data-amount', amount.toString())        
+            // $('.stripe-button').data('amount', amount.toString())
+        });
+    });
+    </script>
+
+  </form> 
+
+  <style type="text/css">
+
+  .stripe-button-el span { 
+  display: block;
+  width: 191px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+
+
+  border-radius: 5px;
+  border:none;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+  .stripe-button-el span:hover {
+background: #cc324b;
+}
+
+ .stripe-button-el span {
+background: #e64c65;
+margin: 0 auto;
+
+}
+
+
+  </style>
+
+
+
+
+      <!--  <form onsubmit="return false" class="custom-donation" >
           <input type="number" id="custom-donation-amount" placeholder="50.00" min="0" step="10.00"/>
-        <a href="#" class="donate-button sign-in button" data-custom="true" data-name="Custom">  DONATE </a>
-      </form>   
+        <a href="#" class="donate-button sign-in button" data-custom="true" data-name="Custom" >  DONATE </a>
+      </form>   --> 
         <p class="stripe-note">Secure Payments by <a href="https://stripe.com/blog/stripe-checkout">Stripe Checkout</a></p>
     </li>  
   </ul>
@@ -299,27 +327,8 @@ $(document).ready(function() {
 
     <script type="text/javascript" src="http://www.chartjs.org/assets/Chart.js"></script>
 
-     <script>
-     var options = {
-      segmentShowStroke : false,
-      percentageInnerCutout : 80,
-      };
 
-             var doughnutData = [
-                                {
-                                        value: 4300,
-                                        color:"#1abc9c" 
-                                },
-                                {
-                                        value : 8000-4300,
-                                        color : "#262d44"
-                                },
-                        
-                        ];
-
-        var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData, options);
-        
-        </script>
+     
 
   <script type="text/javascript">
         skrollr.init({

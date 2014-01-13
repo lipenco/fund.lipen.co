@@ -298,7 +298,7 @@ h1, h2, p, a, span{
   border-top-right-radius: 5px;
 }
 
-.button  {
+.button , .stripe-button-el span { 
   display: block;
   width: 100%;
   line-height: 50px;
@@ -465,11 +465,11 @@ h1, h2, p, a, span{
         }
 
 
-.sign-in.button:hover, .stripe-button-el:hover {
+.sign-in.button:hover,  .stripe-button-el span:hover {
 background: #cc324b;
 }
 
-.stripe-button-el, .sign-in.button {
+.sign-in.button, .stripe-button-el span {
 background: #e64c65;
 margin: 0 auto;
 
