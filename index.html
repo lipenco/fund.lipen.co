@@ -7,10 +7,14 @@
       Magda Lipińska | Schoolarship Croudfounding
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="thumbnail_image" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
     
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,6 +26,19 @@
     
   </head>
   <body>
+
+
+
+ <div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
   <div id="loading" class="folding"></div>
   <div id="bodywrapper" style="display:none">
@@ -341,6 +358,7 @@
       
       
     </ul>
+
     
     <ul class="elements icon social props horizontal-list block" 
     data-2500-start="left: 52%; top: 5%; opacity:0"
@@ -349,12 +367,26 @@
     data-3640-start="left: 0; top: 28%; opacity:0"
     data-3645-start="left: 0; top: 10%; display:block"
     data-3650-start="left: 0; top: 10%; display:none">
+    <style type="text/css">
+    .sp_a6z7eh {
+    width: 50px !important; /*width of just the button*/
+    overflow: visible; /*so there is no cut off*/
+    vertical-align: top; /*bc all other like buttons align top*/
+     }
+
+    </style>
       
       <li class="facebook">
         <p class="icon">
           <span class="zocial-facebook">
-            <i class="icon-facebook">
-            </i>
+          <!--   <i class="icon-facebook"> </i> -->
+
+          <a class="share facebook" href="http://www.facebook.com/sharer/sharer.php?u=http://fund.lipen.co/" target="_blank" onclick="return windowpop(this.href, 545, 433)" ><i class="icon-facebook"></i></a>
+   
+<!-- 
+          <a class="share twitter" href="https://twitter.com/intent/tweet?text=Check%20out%20%22<%= encodeURI(name) %>%22%20on%20Streme&url=<%= viewUrl %>&via=getstremed" target="_blank"><img src="/images/twitter-24.png" width="24" height="24" alt="Share on Twitter" /></a> -->
+           
+           
           </p>
         </li>
       <li class="twitter2">
@@ -559,6 +591,18 @@
         $('#loading').fadeOut(3000);
         $('#bodywrapper').fadeIn(3000);
      });
+
+   function windowpop(url, width, height) {
+    var leftPosition, topPosition;
+    //Allow for borders.
+    leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+    //Allow for title and status bars.
+    topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+    //Open the window.
+    window.open(url, "Window2", "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
+}
+   
+
    </script>
 
 

@@ -1909,10 +1909,9 @@ margin-top: 5px;
          /*   border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;*/
           }
-           .social .facebook .number {
-              background: #1a4e95;
-           /*   border-bottom-left-radius: 5px;*/
-            }
+
+          
+          
            .social .twitter2 {
             background: #4fc4f6;            
           }
@@ -1920,15 +1919,9 @@ margin-top: 5px;
               font-size: 18px;
             }*/
            
-          .social .googleplus {
-            background: #e64c65;            
-          }
+       
           
-        .social .mailbox {
-            background: #50597b;            
-          /*  border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;*/
-          }
+     
 
 .helpme {
   margin-top: 1.6em;
