@@ -283,7 +283,7 @@
           $("document").ready(function() {
             $.getJSON("https://api-fund-lipen-co.herokuapp.com/donations.json", function(data) {
               $.each(data, function(i, item) {
-                $("#my-table").prepend("<tr><td><img style='width:100px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
+                $("#my-table").prepend("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
                 
               }
                     );
