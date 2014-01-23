@@ -352,6 +352,14 @@
       
       
     </ul>
+      <style type="text/css">
+    .sp_a6z7eh {
+    width: 50px !important; /*width of just the button*/
+    overflow: visible; /*so there is no cut off*/
+    vertical-align: top; /*bc all other like buttons align top*/
+     }
+
+    </style>
 
     
     <ul class="elements icon social props horizontal-list block" 
@@ -361,14 +369,7 @@
     data-3640-start="left: 0; top: 28%; opacity:0"
     data-3645-start="left: 0; top: 10%; display:block"
     data-3650-start="left: 0; top: 10%; display:none">
-    <style type="text/css">
-    .sp_a6z7eh {
-    width: 50px !important; /*width of just the button*/
-    overflow: visible; /*so there is no cut off*/
-    vertical-align: top; /*bc all other like buttons align top*/
-     }
-
-    </style>
+  
       
       <li class="facebook">
         <p class="icon">
@@ -445,7 +446,8 @@
             
           </div>
         </div>
-        <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
+   <!--      <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST"> -->
+         <form action="http://0.0.0.0:3000/donations/checkout" method="POST">
           <div class="left-inner-addon">
             
             <span>
@@ -458,9 +460,9 @@
           src="https://checkout.stripe.com/checkout.js" id="stripe-button" class="stripe-button"
           data-image="images/button.png"
           data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
-          data-name="Fund Magda"
+          data-name="Magda goes to Flatiron School"
           data-label= "DONATE"
-          data-description="Flatiron School Fund"
+          data-description="Thank you!"
           >
           </script>
           <script type="text/javascript">
