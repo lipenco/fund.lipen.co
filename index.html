@@ -282,10 +282,12 @@
           $("document").ready(function() {
             $.getJSON("https://api-fund-lipen-co.herokuapp.com/donations.json", function(data) {
               $.each(data, function(i, item) {
+                if (item.name == "") {
+                  item.name = "anonimous awesome person";
+                }
                 $("#secondtd").before("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
                 
-              }
-                    );
+              });
               var i = data.length;
               $("#nodonors").text(i+1);
               
