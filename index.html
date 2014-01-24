@@ -225,7 +225,7 @@
         
         <table class="flat-table flat-table-2" id="my-table">
           <tbody>
-            <tr>
+            <tr id="secondtd">
               <td>
                 <img style="width:50px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8">
               </td>
@@ -236,7 +236,7 @@
                 good lack!
               </td>
             </tr>
-               <tr>
+           <tr>
             <td>
               <img style="width:50px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8">
               </td>
@@ -251,12 +251,12 @@
           </tbody>
         </table>
         
-        <div id="mobile-chart">
+       <div id="mobile-chart">
           <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
-            <input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
-            <input type="hidden" id="amount-cents" name="amount" value="5000"/>
+            <input type="number" id="custom-donation-amount2" placeholder="50" min="0" step="10.00" focus/>
+            <input type="hidden" id="amount-cents2" name="amount" />
             <script
-            src="https://checkout.stripe.com/checkout.js" id="stripe-button" class="stripe-button"
+            src="https://checkout.stripe.com/checkout.js" id="stripe-button2" class="stripe-button"
             data-image="images/button.png"
             data-key="pk_test_FTZOOu9FL0iYJmkTMa2udiLo"
             data-name="Magda goes to"
@@ -264,17 +264,18 @@
             data-description="Flatiron School"
             >
             </script>
-            <script type="text/javascript">
-              $(function() {
-                $('#custom-donation-amount').blur(function(event) {
-                  var amount = $('#custom-donation-amount').val()*100;
-                  $('#amount-cents').val(amount);
-                  $('#stripe-button').data('amount', amount);
-                }
-                                                 );
-              }
-               );
-            </script>
+
+
+       <script type="text/javascript">
+            $(function() {
+              $('#custom-donation-amount2').blur(function(event) {
+                var amount = $('#custom-donation-amount2').val()*100;
+                $('#amount-cents2').val(amount);
+                $('#stripe-button2').data('amount', amount);
+              });                
+            });
+        </script>
+      
             <p class="stripe-note">
               Secure Payments by 
               <a href="https://stripe.com/blog/stripe-checkout">
@@ -294,20 +295,20 @@
           $("document").ready(function() {
             $.getJSON("https://api-fund-lipen-co.herokuapp.com/donations.json", function(data) {
               $.each(data, function(i, item) {
-                $("#my-table").before("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
+                $("#secondtd").before("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
                 
               }
                     );
               var i = data.length;
               $("#nodonors").text(i+1);
               
-              var val = 0;
+              var val = 4300;
               $.each(data, function(){
                 val += this.amount;
               }
                     );
-              $(".total").text(8000 - 300 - val);
-              var procentage = Math.round((val + 300)/8000 * 100);
+              $(".total").text(12000 - val);
+              var procentage = Math.round((val)/12000 * 100);
               $('#procentage').text(procentage);
               
               var options = {
@@ -322,7 +323,7 @@
                 }
                 ,
                 {
-                  value : 8000-val,
+                  value : 12000-val,
                   color : "#262d44"
                 }
                 ,
@@ -463,9 +464,14 @@
             <span>
               $
             </span>
+
+
+
+
+
             <input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
           </div>
-          <input type="hidden" id="amount-cents" name="amount" value="5000"/>
+          <input type="hidden" id="amount-cents" name="amount" />
           <script
           src="https://checkout.stripe.com/checkout.js" id="stripe-button" class="stripe-button"
           data-image="images/button.png"
@@ -475,16 +481,8 @@
           data-description="Flatiron School Fund"
           >
           </script>
-          <script type="text/javascript">
-            $(function() {
-              $('#custom-donation-amount').blur(function(event) {
-                var amount = $('#custom-donation-amount').val()*100;
-                $('#amount-cents').val(amount);
-                $('#stripe-button').data('amount', amount);
-              }
-             );                
-            });
-          </script>
+        
+
           <p class="stripe-note">
             Secure Payments by 
             <a href="https://stripe.com/blog/stripe-checkout">
@@ -608,9 +606,19 @@
     //Open the window.
     window.open(url, "Window2", "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
     }
+
+   $(function() {
+          $('#custom-donation-amount').blur(function(event) {
+            var amount = $('#custom-donation-amount').val()*100;
+            $('#amount-cents').val(amount);
+            $('#stripe-button').data('amount', amount);
+          });                
+        });
    
 
    </script>
+
+      
 
 
   
