@@ -109,21 +109,22 @@
           Just after defeding my master in totally irrelevant major.
         </p>
         <p>
-          Playing with css at the beginning was fun. Than I wanted to add more magic to my projects and got my hands/head dirty with JavaScript.
+          Playing with css at the beginning was fun. Than I wanted to add more magic to my projects and got my hands dirty with JavaScript.
           <br/>
-          In July something big happened - I got 
+          In July something big happened: I got 
           <strong>
-            Rails Girls Summer of Code
+            <a href="http://railsgirlssummerofcode.org/" target="_blank">Rails Girls Summer of Code</a>
         </strong>
         Schoolarship.
       </p>
       <p>
         During three intense months I was contributing to  
-        <a href="impress.js" target="_blank">
+        
           <strong>
-            impress.js
+          <a href="https://github.com/bartaz/impress.js/" target="_blank">
+            impress.js</a>
           </strong>
-        </a>
+     
         opensource project
       </p>
     </article>
@@ -167,19 +168,19 @@
           </strong>
         </p>
         <p>
-          After developer internsihip in Tokyo I was sure that I want to build awesome applications
+          After developer <a href="http://streme.co/" target="_blank">internsihip in Tokyo</a> I was sure that I want to build awesome applications.
         </p>
         <p>
           To level up my skills I applied to 
           <strong>
-            Flatiron School
+            <a href="http://flatironschool.com/" target="_blank"> Flatiron School</a>
           </strong>
           for three-month intense rails program.
         </p>
         <p>
           I was 
           <strong>
-            accepted
+            accepted.
           </strong>
         </p>
       </article>
@@ -195,24 +196,10 @@
           <strong>
             $8 000
           </strong>
-          to cover the cost.
-        </p>
+          to cover the cost. 
+        </p>    
         <p>
-          Why would you want to contribute to my scholarhip?
-        </p>
-        <p>
-          I am going to pay it back:
-        </p>
-        <p>
-          <strong>
-            For every $20 dollars I invest one hour of helping others people learning how to code.
-          </strong>
-        </p>
-        <p>
-          Maby you, or your friends would like to start leraning?
-        </p>
-        <p>
-          Thanks.
+          Thank you for your support!
         </p>
       </article>
     </section>
@@ -238,7 +225,7 @@
             </tr>
            <tr>
             <td>
-              <img style="width:50px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8">
+              <img style="width:50px" src="images/falt.jpg">
               </td>
               <td>
                 Flatiron School Scholarship
@@ -253,7 +240,7 @@
         
        <div id="mobile-chart">
           <form action="https://api-fund-lipen-co.herokuapp.com/donations/checkout" method="POST">
-            <input type="number" id="custom-donation-amount2" placeholder="50" min="0" step="10.00" focus/>
+            <input type="number" id="custom-donation-amount2" placeholder="50" min="0" step="10.00"/>
             <input type="hidden" id="amount-cents2" name="amount" />
             <script
             src="https://checkout.stripe.com/checkout.js" id="stripe-button2" class="stripe-button"
@@ -471,7 +458,7 @@
 
             <input type="number" id="custom-donation-amount" placeholder="50" min="0" step="10.00"/>
           </div>
-          <input type="hidden" id="amount-cents" name="amount" amount="5000"/>
+          <input type="hidden" id="amount-cents" name="amount" value="5000" />
           <script
           src="https://checkout.stripe.com/checkout.js" id="stripe-button" class="stripe-button"
           data-image="images/button.png"
@@ -592,9 +579,10 @@
       </script>
 
   <script type="text/javascript">
+
    $(window).load(function(){
         $('#loading').fadeOut(3000);
-        $('#bodywrapper').fadeIn(3000);
+        $('#bodywrapper').fadeIn(3000);    
      });
 
    function windowpop(url, width, height) {
