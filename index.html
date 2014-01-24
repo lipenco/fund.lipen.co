@@ -233,7 +233,18 @@
                 Maria
               </td>
               <td>
-                trzymam kciuki
+                good lack!
+              </td>
+            </tr>
+               <tr>
+            <td>
+              <img style="width:50px" src="http://www.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8">
+              </td>
+              <td>
+                Flatiron School Scholarship
+              </td>
+              <td>
+                $4 000 sholarships for Magda
               </td>
             </tr>
             
@@ -283,7 +294,7 @@
           $("document").ready(function() {
             $.getJSON("https://api-fund-lipen-co.herokuapp.com/donations.json", function(data) {
               $.each(data, function(i, item) {
-                $("#my-table").prepend("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
+                $("#my-table").before("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
                 
               }
                     );
@@ -596,7 +607,7 @@
     topPosition = (window.screen.height / 2) - ((height / 2) + 50);
     //Open the window.
     window.open(url, "Window2", "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
-}
+    }
    
 
    </script>
