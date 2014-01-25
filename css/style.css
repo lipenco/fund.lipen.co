@@ -1534,7 +1534,7 @@ strong {font-weight: 700;}
 .m-list-accessories li {display: block; position: absolute;}
 .elements { display: block; position: absolute;}
 .props {z-index: 11;}
-.mustache {width:320px;  height: 200px;  z-index: 22 !important;background: transparent url('../images/mustache.png') 0 0 no-repeat; z-index: 11; position: fixed;}
+.mustache {width:370px;  height: 200px;  z-index: 22 !important;background: transparent url('../images/mustache.png') 0 0 no-repeat; z-index: 11; position: fixed;}
 .github {width:951px;  height: 259px; background: transparent url('../images/github2.jpg') 0 0 no-repeat; z-index: 9;}
 .icon { display: block; margin-top: -10px}
 .octocat {width: 120px; height: 120px; background: transparent url('../images/octocat.jpg') 0 0 no-repeat; z-index: 9; }
@@ -2019,6 +2019,25 @@ float: center;
 
 }
 
+@media (min-width: 1000px) {
+    .large {
+    display: none;
+   } 
+   .normal {
+    display: block;
+   }
+
+}
+
+@media (min-width: 1600px) {
+    .large {
+    display: block;
+   } 
+   .normal {
+    display: none;
+   }
+
+}
 
             
 
