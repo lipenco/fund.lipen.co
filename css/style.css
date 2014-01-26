@@ -2010,7 +2010,7 @@ float: center;
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
 
-   #image-me, .rails, .m-list-accessories li, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .github , .bubble, .social, .poster {
+   #image-me, .rails, .m-list-accessories li, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .large, .normal, .github , .bubble, .social, .poster {
    display: none; 
    }
 
