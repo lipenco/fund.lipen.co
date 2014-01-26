@@ -2008,10 +2008,8 @@ float: center;
 }
  
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
 
-
-
-@media only screen and (max-width: 1024px) {
    #image-me, .rails, .m-list-accessories li, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .github , .bubble, .social, .poster {
    display: none; 
    }
@@ -2031,7 +2029,8 @@ float: center;
 
 }
 
-@media (min-width: 1000px) {
+@media only screen and (min-width : 1024px) {
+
     .large {
     display: none;
    } 
@@ -2041,7 +2040,7 @@ float: center;
 
 }
 
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
     .large {
     display: block;
    } 
