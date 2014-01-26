@@ -2011,7 +2011,7 @@ float: center;
 
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
    #image-me, .rails, .m-list-accessories li, #m-box--scholarhip-elements, #m-box--railsgirls-elements, .octocat, .elements, .fund-chart, .mustache , .github , .bubble, .social, .poster {
    display: none; 
    }
