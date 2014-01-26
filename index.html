@@ -266,7 +266,7 @@
                 if (item.name == "") {
                   item.name = "anonymous awesome person";
                 }
-                $("#secondtd").before("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td>" + item.comment+ "</td></tr>");
+                $("#secondtd").before("<tr><td style='width:100px'><img style='width:50px' src=" + item.gravatar_url + "</td><td>" + item.name +"</td><td class='comment'>" + item.comment+ "</td></tr>");
                 
               });
               var i = data.length;
