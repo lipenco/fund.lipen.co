@@ -561,9 +561,15 @@
       <script type="text/javascript">
         if(bigscreen >= 640){
           document.write('<script src="http://www.chartjs.org/assets/Chart.js"><\/script>');
-           skrollr.init({
-          forceHeight: false
-          });
+    var s = skrollr.init({
+    edgeStrategy: 'set',
+    easing: {
+      WTF: Math.random,
+      inverted: function(p) {
+        return 1-p;
+      }
+    }
+  });
         }
       </script>
 
