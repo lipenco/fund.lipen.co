@@ -1466,7 +1466,7 @@ body {font-size: .85em;}
 
 section { width: 100%; z-index: 7; }
 #skrollr-body, #m-box--flatiron-elements,  #m-box--railsgirls-elements,
-#m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 160%; overflow: hidden;}
+#m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px; overflow: hidden;}
 #image-me {
 position: fixed;
 top:0;
@@ -2023,9 +2023,6 @@ float: center;
     display: block;
    } 
 
-   article {
-    height: auto;
-   }
 
 }
 
