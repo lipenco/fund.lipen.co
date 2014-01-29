@@ -22,12 +22,25 @@
     <link rel="stylesheet" href="css/animation.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
-    <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+   <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+
 
       <script type="text/javascript">
       var bigscreen = Math.max(screen.width,screen.height)
-        if(bigscreen >= 1025){
-          document.write('<script src="http://www.chartjs.org/assets/Chart.js"><\/script>');
+        if(bigscreen <= 1025){
+          function removeScript(pathToScript) {
+            var head = document.getElementsByTagName("head")[0];
+            var scripts = head.getElementsByTagName("script");
+            for (var i = 0; i < scripts.length; i++) {
+                var js = scripts[i];
+                if (js.src == pathToScript) {
+                    head.removeChild(js);
+                    break;
+                }
+            }
+          }
+        removeScript("http://prinzhorn.github.io/skrollr/dist/skrollr.min.js");
+        
         }
       </script>
     
