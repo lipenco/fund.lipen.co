@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/animation.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
-    <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+   
     
   </head>
   <body>
@@ -539,6 +539,7 @@
       <script type="text/javascript">
         if(bigscreen >= 640){
           document.write('<script src="http://www.chartjs.org/assets/Chart.js"><\/script>');
+          document.write('<script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>');
            skrollr.init({
           forceHeight: false
           });
@@ -560,7 +561,7 @@
     //Allow for title and status bars.
     topPosition = (window.screen.height / 2) - ((height / 2) + 50);
     //Open the window.
-    window.open(url, "Window2", "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,location=no,directories=no");
+    window.open(url, "Window2", "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
     }
 
    $(function() {
