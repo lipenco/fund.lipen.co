@@ -1462,9 +1462,11 @@
 
 
 
-body {font-size: .85em;}
+body {font-size: .85em;
+    overflow:scroll;
+}
 
-section { width: 100%; z-index: 7; }
+section { width: 100%; z-index: 7; overflow:scroll;}
 #skrollr-body, #m-box--flatiron-elements,  #m-box--railsgirls-elements,
 #m-box--scholarhip-elements {position: fixed; width: 1000px; left: 50%; margin-left: -500px;  top: 0; height: 1000px; }
 #image-me {
@@ -1476,7 +1478,7 @@ height: 100%;
 
 
 
-article {max-width: 1000px; margin: 0 auto; padding-bottom: 35%;  }
+article {max-width: 1000px; margin: 0 auto; padding-bottom: 35%; overflow:scroll; }
 
 article p {position: relative; z-index: 20}
 article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
