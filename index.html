@@ -561,23 +561,14 @@
 
       <script type="text/javascript">
         if(bigscreen >= 640){
-          document.write('<script src="http://www.chartjs.org/assets/Chart.js"><\/script>');
-    var s = skrollr.init({
-    edgeStrategy: 'set',
-    easing: {
-      WTF: Math.random,
-      inverted: function(p) {
-        return 1-p;
-      }
-    }
-  });
-
-        if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-        skrollr.init({
-            forceHeight: false
-        });
-    }
-    }
+          document.write('<script src="http://www.chartjs.org/assets/Chart.js"><\/script>');     
+       }
+      var s =   skrollr.init({          
+            mobileCheck: function() {
+                //hack - forces mobile version to be off
+                return false;
+            }
+      });
       </script>
 
 
