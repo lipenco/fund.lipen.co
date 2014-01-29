@@ -1478,7 +1478,7 @@ height: 100%;
 
 
 
-article {max-width: 1000px; margin: 0 auto; padding-bottom: 35%; overflow:scroll; }
+article {max-width: 1000px; margin: 0 auto; height: 1000px; overflow:scroll; }
 
 article p {position: relative; z-index: 20}
 article, .tips {font-family: 'Lato', sans-serif; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
